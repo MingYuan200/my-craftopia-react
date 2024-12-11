@@ -1,0 +1,310 @@
+@use '../scss/reset';
+// @use 'keyframes';
+@import url('https://fonts.googleapis.com/css2?family=Braah+One&family=Noto+Sans+TC:wght@100..900&display=swap');
+
+
+
+
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+/* 頁首區 */
+#topbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    z-index: 999;
+
+
+    .menu {
+        display: flex;
+        align-items: center;
+
+        li {
+            margin-left: 10px;
+        }
+    }
+}
+
+#banner {
+    position: relative;
+    width: 100%;
+    height: 25vh;
+    background-image: url(../images/03-1.png);
+    background-size: cover;
+    background-position: bottom;
+
+
+    .banner-deco {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+
+    }
+}
+
+
+/* 內容區 */
+.content-bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 200px;
+
+    background-image: url(../images/BG-img-foot.png);
+    background-size: cover;
+}
+
+/* 麵包穴 */
+.bread2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    max-width: 1000px;
+
+    font-size: 0.8rem;
+
+    padding-left: 8px;
+    margin-bottom: 60px;
+
+    >img {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+        margin: 0px 6px;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+    max-width: 1000px;
+    gap: 150px;
+
+
+    /* 左邊導引欄 */
+    .member-QA-left {
+        // border: 1px solid tomato;
+        // margin-right: 130px;
+        // padding-right: 180px;
+
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+
+        li {
+            margin-top: 10px;
+        }
+
+
+        .left-list {
+            display: flex;
+            margin: 8px;
+            width: 100%;
+            position: relative;
+
+            img {
+                width: 24px;
+                height: 24px;
+                margin-right: 12px;
+            }
+
+            &::after {
+                content: "";
+                background-image: url(../images/Vector-line.svg);
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 3px;
+                position: absolute;
+                bottom: -10px;
+            }
+        }
+
+        .decoLine {
+            margin: 8px 0;
+        }
+    }
+
+
+
+    /* 問答區 */
+    .member-QA-right {
+        // border: 1px solid tomato;
+        width: 100%;
+
+        .title {
+            margin-bottom: 40px;
+
+            img {
+                height: 40px;
+            }
+        }
+
+
+
+        .list-row,
+        .list-row-light {
+            display: flex;
+            margin: 24px 0;
+            gap: 48px;
+
+            .quest-mark {
+                font-weight: bolder;
+                font-size: 20px;
+                background-color: #D4AB8E;
+                border-radius: 99px;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+            }
+
+            .QAset {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                .question {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+
+                    background-color: #D4AB8E;
+                    border-radius: 10px;
+                    padding: 10px 16px 10px 32px;
+
+                    cursor: pointer;
+
+                    .icon-arrow {
+                        width: 30px;
+                        height: 30px;
+                        margin-left: 60px;
+                    }
+                }
+
+                .answer {
+                    background-color: rgb(255, 255, 255,0.65);
+                    border-radius: 0 0 10px 10px;
+                    padding: 20px 42px 36px 42px;
+                    position: relative;
+
+                    font-weight: 400;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        /* 與白色背景的間距 */
+                        top: 0px;
+                        left: 10px;
+                        right: 10px;
+                        bottom: 10px;
+                        border: 2px dashed #D4AB8E;
+                        border-top: none;
+                        /* 虛線樣式 */
+                        border-radius: 0 0 10px 10px;
+
+                    }
+                }
+            }
+        }
+
+        .list-row-light {
+
+            .quest-mark {
+                background-color: #F0E4C6;
+            }
+
+            .QAset {
+                .question {
+                    background-color: #F0E4C6;
+                }
+
+                .answer {
+                    &::before {
+                        border-color: #F0E4C6;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 頁尾區 */
+footer {
+    background-color: #483D3F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // padding: 50px 100px;
+
+
+    .footer-bgDeco {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            bottom: -1px;
+        }
+    }
+
+
+    .foot-content {
+        display: flex;
+        justify-content: space-between;
+
+        width: 100%;
+        padding: 50px 100px;
+
+        img {
+            width: 338px;
+            height: 72px;
+        }
+    }
+
+    .menu {
+        display: flex;
+        text-align: center;
+
+
+        >li {
+            width: 6rem;
+            margin: 0 10px;
+            font-size: 14px;
+            font-weight: 400;
+
+            ul {
+                margin: 15px 0;
+
+                >li {
+                    padding: 4px 0;
+                }
+            }
+        }
+    }
+
+    a,
+    li,
+    small {
+        color: white;
+    }
+
+
+    small {
+        margin-bottom: 50px;
+        font-size: 0.8rem;
+    }
+}
