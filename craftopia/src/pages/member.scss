@@ -3,6 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Braah+One&family=Noto+Sans+TC:wght@100..900&display=swap');
 
 
+
+
+
+
+
 /* 共用設定 */
 body {
     font-family: "Noto Sans TC", sans-serif;
@@ -358,7 +363,7 @@ section {
 
                 .txt {
                     .tag-state {
-                        background-image: url(../images/upcoming.svg);
+                        background-image: url(../images/icon-tag/tag-upcoming.svg);
                         background-size: contain;
                         background-repeat: no-repeat;
                         padding: 15px;
@@ -393,7 +398,7 @@ section {
 
         .reserve-row.finish {
             >.reserve-content .txt .tag-state {
-                background-image: url(../images/completed.svg);
+                background-image: url(../images/icon-tag/tag-completed.svg);
                 padding: 10px 15px;
             }
 

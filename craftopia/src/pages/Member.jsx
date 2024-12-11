@@ -14,16 +14,16 @@ export default function Member() {
                         <div class="resume">
                             <div class="avatar">
                                 <div class="ava-photo">
-                                    <img src="./images/member-avatar.svg" alt="" />
+                                    <img src="./images/avatar/member-avatar.svg" alt="" />
                                 </div>
                                 <div class="camera">
-                                    <img src="./images/type=camera.svg" alt="" />
+                                    <img src="./images/icon-tag/type=camera.svg" alt="" />
                                 </div>
                             </div>
 
                             <div class="name-default">
                                 <p>阿明</p>
-                                <img class="icon-edit" src="./images/type=edit.svg" alt="" />
+                                <img class="icon-edit" src="./images/icon-tag/type=edit.svg" alt="" />
                             </div>
 
                             <div class="member-level">
@@ -36,13 +36,15 @@ export default function Member() {
 
                         </div>
 
+                        {/* 會員資料盒子 */}
                         <div className="information">
+                            {/* 會員基本資料 */}
                             <div class="info">
                                 <div class="title">
                                     <h2>
-                                        <img src="./images/基本資料.svg" alt="" />
+                                        <img src="./images/title/基本資料.svg" alt="" />
                                     </h2>
-                                    <img class="icon-edit" src="./images/type=edit.svg" alt="" />
+                                    <img class="icon-edit" src="./images/icon-tag/type=edit.svg" alt="" />
                                 </div>
                                 <div class="dataBox">
                                     <div class="data">
@@ -61,49 +63,44 @@ export default function Member() {
                                         <p>生日</p>
                                         <p class="data-text">未填寫</p>
                                     </div>
-
-                                    {/* 修改密碼  */}
-                                    <div class="password">
-                                        {/* 標題 */}
-                                        <div class="title">
-                                            <h2>
-                                                <img src="./images/修改密碼.svg" alt="" />
-                                            </h2>
-                                            <button class="password-btn change-password">修改密碼</button>
-                                        </div>
-                                        {/* 表單 */}
-                                        <form action="" method="post" name="member-form" id="password-form" title="會員資料修改">
-
-                                            <label for="passWord">*請輸入舊密碼：</label>
-                                            <input type="text" name="passWord" id="passWord" title="請輸入舊密碼" placeholder="請輸入6-8混合字元"
-                                                required maxlength="8" />
-
-
-                                            <label for="passWord">*請輸入新密碼：</label>
-                                            <input type="text" name="passWord" id="passWord" title="請輸入新密碼" placeholder="請輸入6-8混合字元"
-                                                required maxlength="8" />
-
-                                            <label for="passWord-2">*再次確認新密碼</label>
-                                            <input type="text" name="passWord-2" id="passWord-2" title="再次確認新密碼"
-                                                placeholder="請輸入6-8混合字元" required maxlength="8" />
-
-                                        </form>
-                                        {/* 確認按鈕 */}
-                                        <div class="confirm-btn">
-                                            <button class="password-btn">確認密碼</button>
-                                            <button class="password-cancel">取消</button>
-                                        </div>
-
-
-                                    </div>
-
                                 </div>
                             </div>
+                            {/* 修改密碼  */}
+                            <div class="password">
+                                {/* 標題 */}
+                                <div class="title">
+                                    <h2>
+                                        <img src="./images/修改密碼.svg" alt="" />
+                                    </h2>
+                                    <button class="password-btn change-password">修改密碼</button>
+                                </div>
+                                {/* 表單 */}
+                                <form action="" method="post" name="member-form" id="password-form" title="會員資料修改">
+
+                                    <label for="passWord">*請輸入舊密碼：</label>
+                                    <input type="text" name="passWord" id="passWord" title="請輸入舊密碼" placeholder="請輸入6-8混合字元"
+                                        required maxlength="8" />
+
+
+                                    <label for="passWord">*請輸入新密碼：</label>
+                                    <input type="text" name="passWord" id="passWord" title="請輸入新密碼" placeholder="請輸入6-8混合字元"
+                                        required maxlength="8" />
+
+                                    <label for="passWord-2">*再次確認新密碼</label>
+                                    <input type="text" name="passWord-2" id="passWord-2" title="再次確認新密碼"
+                                        placeholder="請輸入6-8混合字元" required maxlength="8" />
+
+                                </form>
+                                {/* 確認按鈕 */}
+                                <div class="confirm-btn">
+                                    <button class="password-btn">確認密碼</button>
+                                    <button class="password-cancel">取消</button>
+                                </div>
+
+
+                            </div>
+
                         </div>
-
-
-
-
                     </div>
                 </section>
 
@@ -111,7 +108,7 @@ export default function Member() {
                 <section id="reserve">
                     <div class="title">
                         <h2>
-                            <img src="./images/預約紀錄.svg" alt="" />
+                            <img src="./images/title/預約紀錄.svg" alt="" />
                         </h2>
                     </div>
                     {/* 列表區 */}
@@ -156,7 +153,7 @@ export default function Member() {
                             <p>
                                 See All
                             </p>
-                            <img src="./images/type=arrowRight_bold.svg" alt="" />
+                            <img src="./images/icon-tag/type=arrowRight_bold.svg" alt="" />
                             <img class="seeAll-deco" src="./images/seeAll-dot.svg" alt="" />
 
                         </div>
@@ -166,7 +163,7 @@ export default function Member() {
                 {/* 收藏區 */}
                 <section id="like">
                     <div class="title">
-                        <h2><img src="./images/收藏紀錄.svg" alt="" /></h2>
+                        <h2><img src="./images/title/收藏紀錄.svg" alt="" /></h2>
                     </div>
                     {/* 卡片區 */}
                     <div class="card-area">
@@ -238,7 +235,7 @@ export default function Member() {
                             <p>
                                 See All
                             </p>
-                            <img src="./images/type=arrowRight_bold.svg" alt="" />
+                            <img src="./images/icon-tag/type=arrowRight_bold.svg" alt="" />
                             <img class="seeAll-deco" src="./images/seeAll-dot.svg" alt="" />
 
                         </div>
@@ -249,13 +246,13 @@ export default function Member() {
                 <section id="experience">
                     <div class="expWrapper">
                         <div class="expTitle">
-                            <img src="./images/我的心得分享.svg" alt="" />
+                            <img src="./images/title/我的心得分享.svg" alt="" />
                             <div class="btn-area">
                                 <div class="btn-seeAll">
                                     <p>
                                         See All
                                     </p>
-                                    <img src="./images/type=arrowRight_bold.svg" alt="" />
+                                    <img src="./images/icon-tag/type=arrowRight_bold.svg" alt="" />
                                     <img class="seeAll-deco" src="./images/seeAll-dot.svg" alt="" />
 
                                 </div>
