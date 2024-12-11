@@ -1,0 +1,14 @@
+import { Link } from "react-router-dom";
+
+
+export default function Navbar() {
+    return (
+        <div>
+            <ul>
+                <li>
+                    <Link to='/member'>會員中心</Link>
+                </li>
+            </ul>
+        </div>
+    )
+}
