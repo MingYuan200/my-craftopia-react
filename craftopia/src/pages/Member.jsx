@@ -70,7 +70,7 @@ export default function Member() {
                                 {/* 標題 */}
                                 <div class="title">
                                     <h2>
-                                        <img src="./images/修改密碼.svg" alt="" />
+                                        <img src="./images/title/修改密碼.svg" alt="" />
                                     </h2>
                                     <button class="password-btn change-password">修改密碼</button>
                                 </div>
@@ -171,7 +171,7 @@ export default function Member() {
                             <a href="#">
                                 <figure class="classPhoto">
                                     <img class="classPhoto-img" src="./images/classphoto-01.jpg" alt="" />
-                                    <img class="tagHotorNew" src="./images/labels-hot.svg" alt="" />
+                                    <img class="tagHotorNew" src="./images/icon-tag/labels-hot.svg" alt="" />
                                 </figure>
                                 <div class="classTag">
                                     <p class="classLevel">入門</p>
@@ -179,7 +179,7 @@ export default function Member() {
                                 </div>
                                 <div class="classTitle">
                                     <h3>創造專屬你們的對戒！『草樹工作坊』銀戒雙人體驗課 </h3>
-                                    <img class="icons-heart" src="./images/icons-heart.svg" alt="" />
+                                    <img class="icons-heart" src="./images/icon-tag/icons-heart.svg" alt="" />
                                 </div>
                                 <div class="classPrice">
                                     <p class="classStoreName">草樹工作坊</p>
@@ -191,7 +191,7 @@ export default function Member() {
                             <a href="#">
                                 <figure class="classPhoto">
                                     <img class="classPhoto-img" src="./images/classphoto-01.jpg" alt="" />
-                                    <img class="tagHotorNew" src="./images/labels-hot.svg" alt="" />
+                                    <img class="tagHotorNew" src="./images/icon-tag/labels-hot.svg" alt="" />
                                 </figure>
                                 <div class="classTag">
                                     <p class="classLevel">入門</p>
@@ -199,7 +199,7 @@ export default function Member() {
                                 </div>
                                 <div class="classTitle">
                                     <h3>創造專屬你們的對戒！『草樹工作坊』銀戒雙人體驗課 </h3>
-                                    <img class="icons-heart" src="./images/icons-heart.svg" alt="" />
+                                    <img class="icons-heart" src="./images/icon-tag/icons-heart.svg" alt="" />
                                 </div>
                                 <div class="classPrice">
                                     <p class="classStoreName">草樹工作坊</p>
@@ -211,7 +211,7 @@ export default function Member() {
                             <a href="#">
                                 <figure class="classPhoto">
                                     <img class="classPhoto-img" src="./images/classphoto-01.jpg" alt="" />
-                                    <img class="tagHotorNew" src="./images/labels-hot.svg" alt="" />
+                                    <img class="tagHotorNew" src="./images/icon-tag/labels-hot.svg" alt="" />
                                 </figure>
                                 <div class="classTag">
                                     <p class="classLevel">入門</p>
@@ -219,7 +219,7 @@ export default function Member() {
                                 </div>
                                 <div class="classTitle">
                                     <h3>創造專屬你們的對戒！『草樹工作坊』銀戒雙人體驗課 </h3>
-                                    <img class="icons-heart" src="./images/icons-heart.svg" alt="" />
+                                    <img class="icons-heart" src="./images/icon-tag/icons-heart.svg" alt="" />
                                 </div>
                                 <div class="classPrice">
                                     <p class="classStoreName">草樹工作坊</p>
@@ -228,6 +228,7 @@ export default function Member() {
                             </a>
                         </div>
                     </div>
+                    
 
                     {/* 看全部按鈕 */}
                     <div class="btn-area">
