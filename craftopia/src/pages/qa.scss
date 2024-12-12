@@ -59,8 +59,7 @@ body {
     padding-top: 20px;
     padding-bottom: 200px;
 
-    background-image: url(../images/BG-img-foot.png);
-    background-size: cover;
+    background-image: url(../images/BG-texture-400.jpg);
 }
 
 /* 麵包穴 */
@@ -186,21 +185,48 @@ body {
                     padding: 10px 16px 10px 32px;
 
                     cursor: pointer;
+                    transition: .4s linear;
 
                     .icon-arrow {
                         width: 30px;
                         height: 30px;
                         margin-left: 60px;
+
+                        transition: .4s linear;
                     }
                 }
 
+                .question.show {
+                    border-radius: 10px 10px 0 0;
+
+                    .icon-arrow.show {
+                        transform: rotate(180deg);
+                        // .QA-arrowDown {
+                        //     display: none;
+                        // }
+                    }
+                }
+
+                .ansWrap {
+                    // max-height: 0;
+                    // overflow: hidden;
+                    // transition:  .8s ease-in-out ;
+
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: all 0.8s linear;
+                }
+
+
                 .answer {
-                    background-color: rgb(255, 255, 255,0.65);
+                    display: flex;
+                    background-color: rgb(255, 255, 255, 0.65);
                     border-radius: 0 0 10px 10px;
                     padding: 20px 42px 36px 42px;
                     position: relative;
 
                     font-weight: 400;
+
 
                     &::before {
                         content: "";
@@ -217,8 +243,14 @@ body {
 
                     }
                 }
+
+                .ansWrap.show {
+                    max-height: 1000px;
+                }
             }
         }
+
+
 
         .list-row-light {
 
@@ -308,3 +340,16 @@ footer {
         font-size: 0.8rem;
     }
 }
+
+
+
+// animation: slideDown 1s linear both;
+// @keyframes slideDown {
+//     from {
+//         height: 0;
+//     }
+
+//     to {
+//         height: 200px;
+//     }
+// }
