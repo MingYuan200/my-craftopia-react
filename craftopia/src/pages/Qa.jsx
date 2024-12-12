@@ -48,19 +48,66 @@ export default function Qa() {
                             </h2>
 
                             <ul className="list">
-
-                                <ShowQa/>
-
-
+                                <ShowQa />
                             </ul>
                         </div>
                     </div>
-
-
-
                 </div>
             </main>
 
+            {/* 頁尾區 */}
+            <footer>
+                <div className="footer-bgDeco">
+                    <img src="./images/footer-deco.png" alt="" />
+                </div>
+                <div className="foot-content">
+                    <img src="./images/footer-logo.svg" alt="" />
+                    {/* 選單*/}
+                    <ul className="menu">
+                        <li><a href="">首頁</a></li>
+                        <li>
+                            <a href="">發掘店家</a>
+                            <ul>
+                                <li><a href="">金工</a></li>
+                                <li><a href="">陶藝</a></li>
+                                <li><a href="">皮革</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">預約課程</a>
+                            <ul>
+                                <li><a href="">熱門課程</a></li>
+                                <li><a href="">最新課程</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">商城</a>
+                            <ul>
+                                <li><a href="">商城</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">會員中心</a>
+                            <ul>
+                                <li><a href="">會員資料</a></li>
+                                <li><a href="">預約紀錄</a></li>
+                                <li><a href="">收藏紀錄</a></li>
+                                <li><a href="">我的分享</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="">常見問題</a>
+                            <ul>
+                                <li><a href="">會員相關</a></li>
+                                <li><a href="">預約相關</a></li>
+                                <li><a href="">課程相關</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <small> Copyright© 2024 CRAFTOPIA All rights reserved. </small>
+            </footer>
 
         </>
     )

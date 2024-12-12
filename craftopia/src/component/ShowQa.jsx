@@ -16,9 +16,14 @@ export default function ShowQa() {
             ans: '手機訊號不佳，建議至訊號良好的地方再次獲取驗證碼。確實關閉手機wifi 功能，使用個人網路後再次嘗試。手機訊號不佳，建議至訊號良好的地方再次獲取驗證碼。確實關閉手機wifi 功能，使用個人網路後再次嘗試。手機訊號不佳，建議至訊號良好的地方再次獲取驗證碼。確實關閉手機wifi 功能，使用個人網路後再次嘗試。',
             isClicked: false,
         },
-        ,
         {
             id: 3,
+            question: '收不到驗證碼',
+            ans: '手機訊號不佳，建議至訊號良好的地方再次獲取驗證碼。確實關閉手機wifi 功能，使用個人網路後再次嘗試。',
+            isClicked: false,
+        },
+        {
+            id: 4,
             question: '收不到驗證碼',
             ans: '手機訊號不佳，建議至訊號良好的地方再次獲取驗證碼。確實關閉手機wifi 功能，使用個人網路後再次嘗試。',
             isClicked: false,
@@ -35,6 +40,7 @@ export default function ShowQa() {
     //     }))
     // }
 
+
     // toDoList的方式：適合多選，可以一次展開多個選項，不會自動收合
     const toggleClick = (id) => {
         setQaData(qaData.map((data) => {
@@ -44,17 +50,16 @@ export default function ShowQa() {
         }))
     }
 
-
-
-
+    console.log(qaData);
 
     return (
         <>
             {
-                qaData.map((item) => {
+
+                qaData.map((item, index) => {
                     return (
 
-                        <li className="list-row" key={item.id}>
+                        <li className={`list-row ${index % 2 === 1 ? 'light' : ''}`} key={item.id}>
                             <div>
                                 <p className="quest-mark">?</p>
                             </div>
@@ -65,7 +70,7 @@ export default function ShowQa() {
                                     <div className={item.isClicked ? 'icon-arrow show' : 'icon-arrow'}>
 
                                         <img className="QA-arrowDown" src="./images/icon-tag/type=arrowDown_bold.svg" alt="" />
-                                        {/* <img className="QA-arrowUp" src="./images/icon-tag/type=arrowUp_bold.svg" alt="" /> */}
+
 
                                     </div>
                                 </div>
@@ -88,11 +93,6 @@ export default function ShowQa() {
     )
 }
 
-{/* <div className={item.isClicked ? 'answer show' : 'answer'}>
-                                    <p>
-                                        {item.ans}
-                                    </p>
-                                </div> */}
 
 
 
