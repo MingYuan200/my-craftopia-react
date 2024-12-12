@@ -25,7 +25,7 @@ export default function ShowQa() {
         },
     ]);
 
-    // 建立切換 雙向展開收合 的函式
+    // 建立切換 雙向展開收合 的函式，但會有一點暈
     // const toggleClick = (id) => {
     //     setQaData(qaData.map((data) => {
     //         return {

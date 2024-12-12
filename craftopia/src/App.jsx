@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import $ from 'jquery';
 import Navbar from './component/Navbar';
 import Member from './pages/Member';
 import Qa from './pages/Qa';
