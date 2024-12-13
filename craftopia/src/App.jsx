@@ -18,7 +18,7 @@ function App() {
         <Route path='/qa' element={<Qa />}></Route>
       </Routes>
 
-      {/* <section className='indexBanner'>
+      <section className='indexBanner'>
         <div className="banner-mask"></div>
       </section>
 
@@ -28,7 +28,7 @@ function App() {
         <img src="./images/blob-1.svg" alt="" className='blob-1' />
         <img src="./images/blob-2.svg" alt="" className='blob-2' />
         <img src="./images/blob-3.svg" alt="" className='blob-3' />
-      </div> */}
+      </div>
 
     </div>
   )
