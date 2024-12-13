@@ -6,10 +6,10 @@ export default function Qa() {
         <>
             {/* <!-- 主要內容區 --> */}
             <section id="banner">
-                <div className="banner-deco">
-                    <img src="./images/BG-img-過度邊緣.png" alt="" />
-                </div>
+                <div className="banner-mask"> </div>
             </section>
+
+            
 
             <main>
                 <div className="content-bg">
