@@ -1,5 +1,10 @@
 import ShowQa from '../component/ShowQa'
 import './qa.scss'
+import Blob from "../assets/blob.svg";
+import Blob2 from "../assets/blob2.svg";
+import Blob3 from "../assets/blob3.svg";
+
+
 
 export default function Qa() {
     return (
@@ -9,7 +14,7 @@ export default function Qa() {
                 <div className="banner-mask"> </div>
             </section>
 
-            
+
 
             <main>
                 <div className="content-bg">
@@ -24,19 +29,19 @@ export default function Qa() {
                         <ul className="member-QA-left">
                             <li>
                                 <a className="left-list" href="">
-                                    <img src="./images/Vector-1.svg" alt="" />
+                                    <Blob className='leftIcon'></Blob>
                                     會員相關
                                 </a>
                             </li>
                             <li>
                                 <a className="left-list" href="">
-                                    <img src="./images/Vector-2.svg" alt="" />
+                                    <Blob2 className='leftIcon'></Blob2>
                                     課程相關
                                 </a>
                             </li>
                             <li>
                                 <a className="left-list" href="">
-                                    <img src="./images/Vector-3.svg" alt="" />
+                                    <Blob3 className='leftIcon'></Blob3>
                                     預約相關
                                 </a>
                             </li>
@@ -46,7 +51,20 @@ export default function Qa() {
                             <h2 className="title">
                                 <img src="./images/title/會員相關.svg" alt="" />
                             </h2>
+                            <ul className="list">
+                                <ShowQa />
+                            </ul>
 
+                            <h2 className="title">
+                                <img src="./images/title/會員相關.svg" alt="" />
+                            </h2>
+                            <ul className="list">
+                                <ShowQa />
+                            </ul>
+                            
+                            <h2 className="title">
+                                <img src="./images/title/會員相關.svg" alt="" />
+                            </h2>
                             <ul className="list">
                                 <ShowQa />
                             </ul>

@@ -4,6 +4,7 @@ import $ from 'jquery';
 import Navbar from './component/Navbar';
 import Member from './pages/Member';
 import Qa from './pages/Qa';
+import Try from './pages/try';
 
 
 
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path='/member' element={<Member />}></Route>
         <Route path='/qa' element={<Qa />}></Route>
+        <Route path='/try' element={<Try />}></Route>
       </Routes>
 
       {/* <section className='indexBanner'>
