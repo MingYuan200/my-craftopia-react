@@ -1,56 +1,22 @@
 import { useState } from "react";
 
-export default function ShowQa() {
+export default function ShowQa({data}) {
 
-    // 可以修改資料的方式
-    const [qaData, setQaData] = useState([
-        {
-            id: 1,
-            question: '如何註冊會員',
-            ans: '透過信箱綁定',
-            isClicked: false,
-        },
-        {
-            id: 2,
-            question: '如何更改會員資料',
-            ans: '手機訊號不佳，建議至訊號良好的地方再次獲取驗證碼。確實關閉手機wifi 功能，使用個人網路後再次嘗試。手機訊號不佳，建議至訊號良好的地方再次獲取驗證碼。確實關閉手機wifi 功能，使用個人網路後再次嘗試。手機訊號不佳，建議至訊號良好的地方再次獲取驗證碼。確實關閉手機wifi 功能，使用個人網路後再次嘗試。',
-            isClicked: false,
-        },
-        {
-            id: 3,
-            question: '收不到驗證碼',
-            ans: '手機訊號不佳，建議至訊號良好的地方再次獲取驗證碼。確實關閉手機wifi 功能，使用個人網路後再次嘗試。',
-            isClicked: false,
-        },
-        {
-            id: 4,
-            question: '收不到驗證碼',
-            ans: '手機訊號不佳，建議至訊號良好的地方再次獲取驗證碼。確實關閉手機wifi 功能，使用個人網路後再次嘗試。',
-            isClicked: false,
-        },
-    ]);
+    
 
-    // 建立切換 雙向展開收合 的函式，但會有一點暈
-    // const toggleClick = (id) => {
-    //     setQaData(qaData.map((data) => {
-    //         return {
-    //             ...data,
-    //             isClicked: data.id === id ? !data.isClicked : false,
-    //         };
-    //     }))
-    // }
+    const [qaData, setQaData] = useState(data);
 
 
     // toDoList的方式：適合多選，可以一次展開多個選項，不會自動收合
     const toggleClick = (id) => {
-        setQaData(qaData.map((data) => {
-            return data.id === id
-                ? { ...data, isClicked: !data.isClicked }
-                : data
-        }))
-    }
+        setQaData(qaData.map((item) => {
+            return item.id === id
+                ? { ...item, isClicked: !item.isClicked }
+                : item;
+        }));
+    };
 
-    console.log(qaData);
+    // console.log(qaData);
 
     return (
         <>
@@ -86,51 +52,27 @@ export default function ShowQa() {
                             </div>
                         </li>
 
-                    )
+                    );
                 })
             }
         </>
-    )
+    );
 }
 
 
+// 建立切換 雙向展開收合 的函式，但會有一點暈
+// const toggleClick = (id) => {
+//     setQaData(qaData.map((data) => {
+//         return {
+//             ...data,
+//             isClicked: data.id === id ? !data.isClicked : false,
+//         };
+//     }))
+// }
 
-
-
-// 資料
-// const qaData = [
-//     {
-//         id: 1,
-//         question: '如何註冊會員',
-//         ans: '透過信箱綁定',
-//     },
-//     {
-//         id: 2,
-//         question: '收不到驗證碼',
-//         ans: '手機訊號不佳，建議至訊號良好的地方再次獲取驗證碼。確實關閉手機wifi 功能，使用個人網路後再次嘗試。',
-//     }
-// ];
 
 // const qaData = {
-//     課程頁面:[{id: 1, question: '如何註冊會員', ans: '透過信箱綁定' },],
 //     問題頁面之會員:[],
 //     問題頁面之課程:[],
 //     問題頁面之預約:[],
-// };
-
-// const toggleClick = (id) => {
-//     setQaData(
-//         qaData.map((data) => {
-//             if (data.id === id) {
-//                 const targetElement = document.getElementById(`answer-${id}`);
-//                 const contentHeight = targetElement.scrollHeight;
-//                 targetElement.style.height = data.isClicked ? "0px" : `${contentHeight}px`; // 切換高度
-//                 return {
-//                     ...data,
-//                     isClicked: !data.isClicked,
-//                 };
-//             }
-//             return { ...data, isClicked: false }; // 其他項目折疊
-//         })
-//     );
 // };

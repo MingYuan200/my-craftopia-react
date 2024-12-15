@@ -8,6 +8,65 @@ import { useRef, useState } from 'react';
 
 
 export default function Qa() {
+
+    const qaData = {
+        member: [
+            {
+                id: 1,
+                question: '如何註冊會員',
+                ans: '透過信箱綁定，未來會支援手機綁定功能，可以追總我們保持關注。',
+                isClicked: false,
+            },
+            {
+                id: 2,
+                question: '如何更改會員資料',
+                ans: '請登入後至會員中心頁面修改。',
+                isClicked: false,
+            },
+            {
+                id: 3,
+                question: '會員點數是什麼',
+                ans: '是你花錢的證明，一種回饋石頭們的獎勵機制，鼓勵您持續投入創作熱情，未來有更多功能可以用點數解鎖，更加暢遊手作世界。',
+                isClicked: false,
+            },
+            {
+                id: 4,
+                question: '如何獲得會員點數',
+                ans: '可以透過報名課程、分享心得獲得。\n1.課程積點+20點\n2.分享心得+10點',
+                isClicked: false,
+            },
+        ],
+        class: [
+            {
+                id: 1,
+                question: '如何報名課程',
+                ans: '進入課程頁面，選擇課程進行報名',
+                isClicked: false,
+            },
+            {
+                id: 2,
+                question: '課程是否有包含材料費用',
+                ans: '依據每個課程會有不同的機制，可以詳閱每一堂課程的說明',
+                isClicked: false,
+            },
+        ],
+        reserve: [
+            {
+                id: 1,
+                question: '預約後可以修改時間嗎',
+                ans: '可以，需在課程上課日前三天修改，若該課程有額外的規定，請依課程內容為主。',
+                isClicked: false,
+            },
+            {
+                id: 2,
+                question: '如何取消預約',
+                ans: '請登入後至會員中心頁面，點擊愈取消的課程項目，若無該項目，可點擊【see all】按鈕查看完整的項目。可進行取消的時間與權力，依據該課程的店家規定，本平台並無強制規定，還請多加留意。',
+                isClicked: false,
+            },
+        ],
+    };
+    
+
     // 一開始就要先渲染sctive1 所以要先在useState給值
     const [activeId, setActiveId] = useState('qaPart1');
     const refPart1 = useRef();
@@ -81,7 +140,7 @@ export default function Qa() {
                                     <img src="./images/title/會員相關.svg" alt="" />
                                 </h2>
                                 <ul className="list">
-                                    <ShowQa />
+                                    <ShowQa data={qaData.member}/>
                                 </ul>
                             </section>
 
@@ -90,7 +149,7 @@ export default function Qa() {
                                     <img src="./images/title/課程相關.svg" alt="" />
                                 </h2>
                                 <ul className="list">
-                                    <ShowQa />
+                                    <ShowQa data={qaData.class}/>
                                 </ul>
                             </section>
 
@@ -99,7 +158,7 @@ export default function Qa() {
                                     <img src="./images/title/預約相關.svg" alt="" />
                                 </h2>
                                 <ul className="list">
-                                    <ShowQa />
+                                    <ShowQa data={qaData.reserve}/>
                                 </ul>
                             </section>
 
