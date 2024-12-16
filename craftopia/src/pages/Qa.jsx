@@ -1,9 +1,10 @@
+import { useRef, useState } from 'react';
 import ShowQa from '../component/ShowQa'
 import './qa.scss'
 import Blob from "../assets/blob.svg";
 import Blob2 from "../assets/blob2.svg";
 import Blob3 from "../assets/blob3.svg";
-import { useRef, useState } from 'react';
+
 
 
 
@@ -135,7 +136,7 @@ export default function Qa() {
                         </ul>
 
                         <div className="member-QA-right">
-                            <section id='qaPart1' ref={refPart1}>
+                            <section id='qaPart1' ref={refPart1} data-aos='fade-up' data-aos-duration='800'>
                                 <h2 className="title">
                                     <img src="./images/title/會員相關.svg" alt="" />
                                 </h2>
@@ -144,7 +145,7 @@ export default function Qa() {
                                 </ul>
                             </section>
 
-                            <section id='qaPart2' ref={refPart2}>
+                            <section id='qaPart2' ref={refPart2} data-aos='fade-up' data-aos-duration='800'>
                                 <h2 className="title">
                                     <img src="./images/title/課程相關.svg" alt="" />
                                 </h2>
@@ -153,7 +154,7 @@ export default function Qa() {
                                 </ul>
                             </section>
 
-                            <section id='qaPart3' ref={refPart3}>
+                            <section id='qaPart3' ref={refPart3} data-aos='fade-up' data-aos-duration='800'>
                                 <h2 className="title">
                                     <img src="./images/title/預約相關.svg" alt="" />
                                 </h2>
