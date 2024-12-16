@@ -27,10 +27,10 @@ function App() {
         <Route path='/try' element={<Try />}></Route>
       </Routes>
 
-      <h1>Aos</h1>
+      {/* <h1>Aos</h1>
       <div className="box" data-aos='fade-up' data-aos-duration='600'>
         <p>fade up</p>
-      </div>
+      </div> */}
 
       {/* <section className='indexBanner'>
         <div className="banner-mask"></div>

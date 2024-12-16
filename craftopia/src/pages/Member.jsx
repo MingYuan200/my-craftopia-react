@@ -94,8 +94,6 @@ export default function Member() {
                                     <button className="password-btn">確認密碼</button>
                                     <button className="password-cancel">取消</button>
                                 </div>
-
-
                             </div>
 
                         </div>
