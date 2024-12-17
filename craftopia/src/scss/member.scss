@@ -1,10 +1,5 @@
-@use '../scss/reset';
-// @use 'keyframes';
+@use './reset';
 @import url('https://fonts.googleapis.com/css2?family=Braah+One&family=Noto+Sans+TC:wght@100..900&display=swap');
-
-
-
-
 
 
 
@@ -235,14 +230,11 @@ section {
                 }
             }
 
-            // 修改密碼區
-            .password {
+            /* 修改密碼區 */
+            #password {
                 margin-top: 80px;
 
-                >.title h2 {
-                    margin-right: 48px;
-                }
-
+                //btn共用-修改密碼、確認修改
                 .password-btn {
                     border: 0;
                     color: white;
@@ -250,68 +242,91 @@ section {
                     font-size: 16px;
                     padding: 14px 24px;
                     border-radius: 99px;
-
                     cursor: pointer;
-                }
 
-                .password-cancel {
-                    border: 0;
-                    color: #483D3F;
-                    background-color: transparent;
-                    border: 2px solid #483D3F;
-                    font-size: 16px;
-                    padding: 14px 24px;
-                    border-radius: 99px;
-
-                    cursor: pointer;
-                }
-
-                #password-form {
-                    display: none;
-                    flex-direction: column;
-
-                    label {
-                        margin: 20px 0;
+                    &:hover {
+                        background-color: #B07662;
                     }
+                }
 
-                    input,
-                    textarea {
-                        color: #483D3F;
-                        padding: 10px;
-                        border-radius: 6px;
+                .password-btn.change-password {
+                    opacity: 0.6;
+                    background-color: #B07662;
+                    cursor: default;
+                }
 
-                        border: none;
+                .title {
+                    h2 {
+                        margin-right: 48px;
+                    }
+                }
 
-                        &::placeholder {
-                            color: #888;
+                // 表單最外層
+                .form-container {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.8s ease-out;
+
+                    #password-form2 {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 0 4px;
+
+                        label {
+                            margin: 20px 0;
                         }
 
-                        &:focus {
-                            outline: 2px solid #483D3F;
-                            background-color: #feebba;
+                        input,
+                        textarea {
+                            color: #483D3F;
+                            padding: 10px;
+                            border-radius: 6px;
+
+                            border: none;
+
+                            &::placeholder {
+                                color: #888;
+                            }
+
+                            &:focus {
+                                outline: 2px solid #483D3F;
+                                background-color: #feebba;
+                            }
                         }
                     }
-
                 }
 
+                // 表單最外層-展開
+                .form-container.show {
+                    max-height: 500px;
+                }
+
+                // 確認按鈕區
                 .confirm-btn {
                     margin: 24px 0;
-                    display: none;
-                    gap: 24px;
-                }
-
-                // 密碼交互
-                #password-form.show,
-                .confirm-btn.show {
                     display: flex;
-                    animation: show 0.8s both;
+                    gap: 24px;
+
+                    //btn-取消
+                    .password-cancel {
+                        color: #483D3F;
+                        background-color: transparent;
+                        border: 2px solid #483D3F;
+                        font-size: 16px;
+                        padding: 14px 24px;
+                        border-radius: 99px;
+                        cursor: pointer;
+
+                        &:hover {
+                            border: 2px solid #B07662;
+                            color: #B07662;
+                        }
+                    }
                 }
             }
+
         }
-
-
     }
-
 }
 
 /* 預約記錄區 */

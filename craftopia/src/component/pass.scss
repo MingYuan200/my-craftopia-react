@@ -235,32 +235,11 @@ section {
                 }
             }
 
-            // 修改密碼區
-            /* 初始樣式：隱藏表單區域 */
-            .form-container {
-                max-height: 0;
-                /* 初始高度為 0 */
-                overflow: hidden;
-                /* 防止溢出內容顯示 */
-                transition: max-height 0.8s ease-out;
-                /* 設置滑動動畫效果 */
-            }
-
-            /* 展開樣式 */
-            .form-container.open {
-                max-height: 500px;
-                transition: max-height 0.8s ease-out;
-                // transition: all 0.5s cubic-bezier(1, 0, 1, 0);
-                /* 最大高度，根據內容調整 */
-            }
-
-            .password {
+            /* 修改密碼區 */
+            #password {
                 margin-top: 80px;
 
-                >.title h2 {
-                    margin-right: 48px;
-                }
-
+                //btn共用-修改密碼、確認修改
                 .password-btn {
                     border: 0;
                     color: white;
@@ -274,71 +253,79 @@ section {
                         background-color: #B07662;
                     }
                 }
+
                 .password-btn.change-password {
                     opacity: 0.6;
                     background-color: #B07662;
                     cursor: default;
                 }
 
-                .password-cancel {
-                    border: 0;
-                    color: #483D3F;
-                    background-color: transparent;
-                    border: 2px solid #483D3F;
-                    font-size: 16px;
-                    padding: 14px 24px;
-                    border-radius: 99px;
-
-                    cursor: pointer;
+                .title {
+                    h2 {
+                        margin-right: 48px;
+                    }
                 }
 
-                #password-form2 {
-                    display: none;
-                    flex-direction: column;
-                    padding: 0 4px;
+                // 表單最外層
+                .form-container {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.8s ease-out;
 
-                    label {
-                        margin: 20px 0;
-                    }
+                    #password-form2 {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 0 4px;
 
-                    input,
-                    textarea {
-                        color: #483D3F;
-                        padding: 10px;
-                        border-radius: 6px;
-
-                        border: none;
-
-                        &::placeholder {
-                            color: #888;
+                        label {
+                            margin: 20px 0;
                         }
 
-                        &:focus {
-                            outline: 2px solid #483D3F;
-                            background-color: #feebba;
+                        input,
+                        textarea {
+                            color: #483D3F;
+                            padding: 10px;
+                            border-radius: 6px;
+
+                            border: none;
+
+                            &::placeholder {
+                                color: #888;
+                            }
+
+                            &:focus {
+                                outline: 2px solid #483D3F;
+                                background-color: #feebba;
+                            }
                         }
                     }
-
                 }
 
+                // 表單最外層-展開
+                .form-container.show {
+                    max-height: 500px;
+                }
+
+                // 確認按鈕區
                 .confirm-btn {
                     margin: 24px 0;
-                    display: none;
-                    gap: 24px;
-                }
-                
-
-                // 密碼交互
-                #password-form2.show,
-                .confirm-btn.show {
                     display: flex;
+                    gap: 24px;
+
+                    //btn-取消
+                    .password-cancel {
+                        color: #483D3F;
+                        background-color: transparent;
+                        border: 2px solid #483D3F;
+                        font-size: 16px;
+                        padding: 14px 24px;
+                        border-radius: 99px;
+                        cursor: pointer;
+                    }
                 }
             }
         }
-
-
     }
-
 }
 
 /* 預約記錄區 */
@@ -666,9 +653,7 @@ section {
                     overflow: hidden;
                     padding-right: 40px;
                     margin-top: 24px;
-
                 }
-
             }
         }
     }

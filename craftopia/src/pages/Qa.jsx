@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import ShowQa from '../component/ShowQa'
-import './qa.scss'
+import '../scss/qa.scss'
 import Blob from "../assets/blob.svg";
 import Blob2 from "../assets/blob2.svg";
 import Blob3 from "../assets/blob3.svg";

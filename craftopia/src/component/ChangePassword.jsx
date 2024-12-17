@@ -1,5 +1,4 @@
 import { useState } from "react";
-import './pass.scss';
 
 export default function ChangePassword() {
 
@@ -7,19 +6,19 @@ export default function ChangePassword() {
     const [isPasswordFormVisible, setPasswordFormVisible] = useState(false);
 
     // 展開密碼表單
-    const handleShowPasswordForm = () => {
+    const showPasswordForm = () => {
         setPasswordFormVisible(true);
     };
 
     // 隱藏密碼表單
-    const handleCancelPasswordForm = () => {
+    const cancelPasswordForm = () => {
         setPasswordFormVisible(false);
     };
 
 
     return (
 
-        <div className="password">
+        <div id="password">
             {/* 標題 */}
             <div className="title">
                 <h2>
@@ -27,28 +26,27 @@ export default function ChangePassword() {
                 </h2>
                 <button
                     className={`password-btn ${isPasswordFormVisible ? "change-password" : ""}`}
-                    onClick={handleShowPasswordForm} // 綁定展開事件
+                    onClick={showPasswordForm} // 展開綁定事件
                 >
                     修改密碼
                 </button>
             </div>
             {/* 表單 */}
             <div
-                className={`form-container ${isPasswordFormVisible ? "open" : ""}`}
+                className={`form-container ${isPasswordFormVisible ? "show" : ""}`}
             >
                 <form
+                    id="password-form2"
                     action=""
                     method="post"
                     name="member-form"
-                    id="password-form2"
                     title="會員資料修改"
-                    className={isPasswordFormVisible ? "show" : ""} // 動態 className
                 >
                     <label htmlFor="oldPassword">*請輸入舊密碼：</label>
                     <input
+                        id="oldPassword"
                         type="password"
                         name="oldPassword"
-                        id="oldPassword"
                         title="請輸入舊密碼"
                         placeholder="請輸入6-8混合字元"
                         required
@@ -57,9 +55,9 @@ export default function ChangePassword() {
 
                     <label htmlFor="newPassword">*請輸入新密碼：</label>
                     <input
+                        id="newPassword"
                         type="password"
                         name="newPassword"
-                        id="newPassword2"
                         title="請輸入新密碼"
                         placeholder="請輸入6-8混合字元"
                         required
@@ -68,9 +66,9 @@ export default function ChangePassword() {
 
                     <label htmlFor="confirmPassword">*再次確認新密碼</label>
                     <input
+                        id="confirmPassword"
                         type="password"
                         name="confirmPassword"
-                        id="confirmPassword"
                         title="再次確認新密碼"
                         placeholder="請輸入6-8混合字元"
                         required
@@ -79,17 +77,17 @@ export default function ChangePassword() {
                 </form>
                 {/* 確認按鈕 */}
                 <div
-                    className={`confirm-btn ${isPasswordFormVisible ? "show" : ""}`} // 動態 className
+                    className="confirm-btn"
                 >
                     <button className="password-btn">確認密碼</button>
                     <button
                         className="password-cancel"
-                        onClick={handleCancelPasswordForm} // 綁定取消事件
+                        onClick={cancelPasswordForm} // 取消綁定事件
                     >
                         取消
                     </button>
-                    </div >
-                </div>
+                </div >
             </div>
-            )
+        </div>
+    )
 }

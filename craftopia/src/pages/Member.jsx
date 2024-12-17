@@ -1,4 +1,5 @@
-import './member.scss'
+import ChangePassword from '../component/ChangePassword'
+import '../scss/member.scss'
 
 export default function Member() {
     return (
@@ -63,39 +64,10 @@ export default function Member() {
                                     </div>
                                 </div>
                             </div>
+
                             {/* 修改密碼  */}
-                            <div className="password">
-                                {/* 標題 */}
-                                <div className="title">
-                                    <h2>
-                                        <img src="./images/title/修改密碼.svg" alt="" />
-                                    </h2>
-                                    <button className="password-btn change-password">修改密碼</button>
-                                </div>
-                                {/* 表單 */}
-                                <form action="" method="post" name="member-form" id="password-form" title="會員資料修改">
-
-                                    <label for="passWord">*請輸入舊密碼：</label>
-                                    <input type="text" name="passWord" id="passWord" title="請輸入舊密碼" placeholder="請輸入6-8混合字元"
-                                        required maxlength="8" />
-
-
-                                    <label for="passWord">*請輸入新密碼：</label>
-                                    <input type="text" name="passWord" id="passWord" title="請輸入新密碼" placeholder="請輸入6-8混合字元"
-                                        required maxlength="8" />
-
-                                    <label for="passWord-2">*再次確認新密碼</label>
-                                    <input type="text" name="passWord-2" id="passWord-2" title="再次確認新密碼"
-                                        placeholder="請輸入6-8混合字元" required maxlength="8" />
-
-                                </form>
-                                {/* 確認按鈕 */}
-                                <div className="confirm-btn">
-                                    <button className="password-btn">確認密碼</button>
-                                    <button className="password-cancel">取消</button>
-                                </div>
-                            </div>
-
+                            <ChangePassword/>
+                            
                         </div>
                     </div>
                 </section>
@@ -209,7 +181,7 @@ export default function Member() {
                                     <img className="classPhoto-img" src="./images/classphoto-01.jpg" alt="" />
                                     <img className="tagHotorNew" src="./images/icon-tag/labels-hot.svg" alt="" />
                                 </figure>
-                                <div class="classTag">
+                                <div className="classTag">
                                     <p className="classLevel">入門</p>
                                     <p className="classTime">3hr</p>
                                 </div>
