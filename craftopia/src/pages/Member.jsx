@@ -1,4 +1,5 @@
 import ChangePassword from '../component/ChangePassword'
+import MemeberInfo from '../component/MemberInfo'
 import '../scss/member.scss'
 
 export default function Member() {
@@ -37,33 +38,9 @@ export default function Member() {
 
                         {/* 會員資料盒子 */}
                         <div className="information">
+                            
                             {/* 會員基本資料 */}
-                            <div className="info">
-                                <div className="title">
-                                    <h2>
-                                        <img src="./images/title/基本資料.svg" alt="" />
-                                    </h2>
-                                    <img className="icon-edit" src="./images/icon-tag/type=edit.svg" alt="" />
-                                </div>
-                                <div className="dataBox">
-                                    <div className="data">
-                                        <p>姓名</p>
-                                        <p className="data-text">王曉明</p>
-                                    </div>
-                                    <div className="data">
-                                        <p>電子信箱</p>
-                                        <p className="data-text">armincraft@gmail.com</p>
-                                    </div>
-                                    <div className="data">
-                                        <p>行動電話</p>
-                                        <p className="data-text">0966-888-888</p>
-                                    </div>
-                                    <div className="data">
-                                        <p>生日</p>
-                                        <p className="data-text">未填寫</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <MemeberInfo/>
 
                             {/* 修改密碼  */}
                             <ChangePassword/>

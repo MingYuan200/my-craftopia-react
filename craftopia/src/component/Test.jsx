@@ -38,7 +38,6 @@ export default function Test() {
     // 完成按鈕
     const handleConfirm = () => {
         const newErrors = {};
-        // if (!memberData.name.trim()) newErrors.name = "姓名不能為空";
         if (!/^\S+@\S+\.\S+$/.test(memberData.email)) newErrors.email = "請輸入有效的電子信箱";
         if (!/^09\d{8}$/.test(memberData.phone)) newErrors.phone = "電話格式需為 09 開頭的 10 位數字";
 

@@ -25,7 +25,7 @@ export default function ChangePassword() {
                     <img src="./images/title/修改密碼.svg" alt="修改密碼" />
                 </h2>
                 <button
-                    className={`password-btn ${isPasswordFormVisible ? "change-password" : ""}`}
+                    className={`memberBtn ${isPasswordFormVisible ? "change-password" : ""}`}
                     onClick={showPasswordForm} // 展開綁定事件
                 >
                     修改密碼
@@ -42,7 +42,7 @@ export default function ChangePassword() {
                     name="member-form"
                     title="會員資料修改"
                 >
-                    <label htmlFor="oldPassword">*請輸入舊密碼：</label>
+                    <label htmlFor="oldPassword">*請輸入舊密碼</label>
                     <input
                         id="oldPassword"
                         type="password"
@@ -53,7 +53,7 @@ export default function ChangePassword() {
                         maxLength="8"
                     />
 
-                    <label htmlFor="newPassword">*請輸入新密碼：</label>
+                    <label htmlFor="newPassword">*請輸入新密碼</label>
                     <input
                         id="newPassword"
                         type="password"
@@ -76,12 +76,10 @@ export default function ChangePassword() {
                     />
                 </form>
                 {/* 確認按鈕 */}
-                <div
-                    className="confirm-btn"
-                >
-                    <button className="password-btn">確認密碼</button>
+                <div className="confirm-btn">
+                    <button className="memberBtn">確認密碼</button>
                     <button
-                        className="password-cancel"
+                        className="cancel-btn"
                         onClick={cancelPasswordForm} // 取消綁定事件
                     >
                         取消

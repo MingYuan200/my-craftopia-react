@@ -150,8 +150,7 @@ body {
 
                         .leftIcon {
                             fill-opacity: 1;
-                            animation: shake .8s;
-                            animation-iteration-count: infinite;
+                            @include aniShake;
                         }
 
                     }
@@ -172,24 +171,6 @@ body {
     }
 
 
-    @keyframes shake {
-        0% {
-            transform: rotate(0deg);
-        }
-
-        25% {
-            transform: rotate(-25deg);
-        }
-
-        50% {
-            transform: rotate(0deg);
-        }
-
-        75% {
-            transform: rotate(25deg);
-        }
-
-    }
 
 
     /* 問答區 */

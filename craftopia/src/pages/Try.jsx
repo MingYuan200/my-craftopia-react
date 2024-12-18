@@ -2,7 +2,6 @@ import { useState } from "react";
 import Blob from "../assets/blob.svg";
 import ChangePassword from "../component/ChangePassword";
 import MemeberInfo from "../component/MemberInfo";
-import MemberTest from "../component/MemberTest";
 import Test from "../component/Test";
 
 
@@ -49,7 +48,7 @@ export default function Try() {
                         {/* 會員基本資料 */}
                         {/* <MemeberInfo /> */}
 
-                        {/* <MemberTest/> */}
+                        
 
                         <Test/>
 
