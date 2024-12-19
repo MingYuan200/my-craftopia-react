@@ -1,11 +1,25 @@
 import ChangePassword from '../component/ChangePassword'
 import MemeberInfo from '../component/MemberInfo'
 import '../scss/member.scss'
+import Blob4 from "../assets/blob4.svg";
+import Blob5 from "../assets/blob5.svg";
 
 export default function Member() {
     return (
         <>
             <main>
+
+                {/* 泡泡區 */}
+                <div className="bg-blob">
+                    <img className='infoBlob1' src="./images/blob-3.svg" alt="" />
+                    <img className='infoBlob2' src="./images/blob-4.svg" alt="" />
+                    <img className='infoBlob3' src="./images/blob-5.svg" alt="" />
+
+                    <Blob4 className='infoBlob2 left-white'/>
+                    <Blob5 className='infoBlob1 left-red'/>
+                    <Blob4 className='right-yelllow'/>
+                    <Blob4 className='right-brown'/>
+                </div>
 
                 {/* 會員資料區 */}
                 <section id="member">
@@ -14,7 +28,7 @@ export default function Member() {
                         <div className="resume">
                             <div className="avatar">
                                 <div className="ava-photo">
-                                    <img src="./images/avatar/member-avatar.svg" alt="" />
+                                    <img src="./images/avatar/24-02.jpg" alt="" />
                                 </div>
                                 <div className="camera">
                                     <img src="./images/icon-tag/type=camera.svg" alt="" />
@@ -38,13 +52,13 @@ export default function Member() {
 
                         {/* 會員資料盒子 */}
                         <div className="information">
-                            
+
                             {/* 會員基本資料 */}
-                            <MemeberInfo/>
+                            <MemeberInfo />
 
                             {/* 修改密碼  */}
-                            <ChangePassword/>
-                            
+                            <ChangePassword />
+
                         </div>
                     </div>
                 </section>
@@ -173,7 +187,7 @@ export default function Member() {
                             </a>
                         </div>
                     </div>
-                    
+
 
                     {/* 看全部按鈕 */}
                     <div className="btn-area">
@@ -218,30 +232,30 @@ export default function Member() {
                                         <img src="./images/tag-stoneLV.svg" alt="" />
                                     </div>
                                     <div className="expDate">
-                                        <p>發布日期</p>
+                                        <p>2020年12月20日</p>
                                         <span>‧</span>
-                                        <p>參加的課程</p>
+                                        <p>陶冶身心造型飾品碟</p>
                                     </div>
-                                    <p>心得內容</p>
+                                    <p className="expTxt">點婆登乙新笑打路有高且昌世了寸蝸學浪：要荷火讀母東，斥只肉拉采夕請真新共聽幸頭條哭間尾，我過讀戶尼東物朵走抓美物由，園松冒同母會彩室。昌唱主每發，良又貫春吹工毛課北起目具京游乙草比珠，話而停吃香物洋！昌唱主每發，良又貫春吹工毛課北起目具京游乙草比珠，話而停吃香物洋！文立黑愛身做斗菜兄貓訴正千相常兆媽；口放山放而勿見立八叫色斤跳公從。從八歌吃害都現風百。片就左，冒休夏豆西中，勿且讀男女笑。文立黑愛身做斗菜兄貓訴正千相常兆媽；口放山放而勿見立八叫色斤跳公從。從八歌吃害都現風百。片就左，冒休夏豆西中，勿且讀男女笑。</p>
                                 </div>
                             </div>
 
-                            <img src="./images/HrLine_rec.svg" alt="" className="hrline" />
+                            {/* <img src="./images/HrLine_rec.svg" alt="" className="hrline" /> */}
 
-                            <div className="Exp">
+                            <div className="Exp flip">
                                 <div className="expPic">
                                     <img src="./images/exp-02.jpg" alt="" />
                                 </div>
                                 <div className="expContent">
                                     <div className="expInfo">
                                         <img src="./images/exp-id-pic-1.png" alt="" />
-                                        <p>文仔</p>
+                                        <p>Amber</p>
                                         <img src="./images/tag-stoneLV.svg" alt="" />
                                     </div>
                                     <div className="expDate">
-                                        <p>發布日期</p>
+                                        <p>2021年8月15日</p>
                                         <span>‧</span>
-                                        <p>參加的課程</p>
+                                        <p>Overloading 戒指 | 純銀 | 送禮自用</p>
                                     </div>
                                     <p className="expTxt">
                                         點婆登乙新笑打路有高且昌世了寸蝸學浪：要荷火讀母東，斥只肉拉采夕請真新共聽幸頭條哭間尾，我過讀戶尼東物朵走抓美物由，園松冒同母會彩室。昌唱主每發，良又貫春吹工毛課北起目具京游乙草比珠，話而停吃香物洋！昌唱主每發，良又貫春吹工毛課北起目具京游乙草比珠，話而停吃香物洋！文立黑愛身做斗菜兄貓訴正千相常兆媽；口放山放而勿見立八叫色斤跳公從。從八歌吃害都現風百。片就左，冒休夏豆西中，勿且讀男女笑。文立黑愛身做斗菜兄貓訴正千相常兆媽；口放山放而勿見立八叫色斤跳公從。從八歌吃害都現風百。片就左，冒休夏豆西中，勿且讀男女笑。
@@ -249,6 +263,12 @@ export default function Member() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    {/* blob裝飾 */}
+                    <div className="bg-blob">
+                        <img className='expBlob2' src="./images/expBlob-2.svg" alt="" />
+                        <img className='expBlob3' src="./images/expBlob-3.svg" alt="" />
                     </div>
                 </section>
 

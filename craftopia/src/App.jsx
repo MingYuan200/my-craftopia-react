@@ -5,7 +5,7 @@ import $ from 'jquery';
 import Navbar from './component/Navbar';
 import Member from './pages/Member';
 import Qa from './pages/Qa';
-import Try from './pages/try';
+import Try from './pages/Try';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
