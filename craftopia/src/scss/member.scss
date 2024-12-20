@@ -17,15 +17,15 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
-    overflow-x: hidden;  
+    overflow: hidden;  
     //不能在全區標籤使用overflow-x: hidden; 會害sticky失效
 
     section {
-        width: 70%;
-        // max-width: 1000px;
+        width: 100%;
         border: 1px dashed tomato;
         display: flex;
         flex-direction: column;
+        padding: 5% 15%;
     }
 
 }
@@ -78,7 +78,6 @@ body {
 
 /* 會員資料區 */
 #member {
-    padding-top: 100px;
 
     .memberWrap {
         display: flex;
@@ -371,7 +370,6 @@ body {
 
 /* 預約記錄區 */
 #reserve {
-    padding-top: 100px;
 
     .title {
         width: 70%;
@@ -468,7 +466,6 @@ body {
 
 /* 收藏區 */
 #like {
-    padding-top: 100px;
 
     .card-area {
         display: flex;
@@ -651,21 +648,19 @@ body {
 
 /* 心得區 */
 #experience {
-    width: 100%;
-    max-width: none;
+
     align-items: center;
-    padding: 100px 0;
 
     background-image: url(../images/expBlob-1.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 
-    margin: 100px 0 300px;
+    margin-bottom: 300px;
     position: relative;
 
     .expWrapper {
-        width: 70%;
+        width: 100%;
         max-width: 1000px;
         display: flex;
         flex-direction: column;
