@@ -17,6 +17,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 
     section {
         width: 70%;
@@ -573,9 +575,8 @@ main {
         width: 500px;
         height: fit-content;
         left: -4%;
-        top: 25%;
+        top: 5%;
         @include aniFloat;
-        background-blend-mode: multiply;
     }
 
     .infoBlob2 {
@@ -583,45 +584,48 @@ main {
         width: 250px;
         height: fit-content;
         right: -5%;
-        top: 12%;
+        top: 3%;
         @include aniFloat;
-        background-blend-mode: multiply;
+        // @include aniFloatRotate(-20deg);
     }
 
     .infoBlob2.left-white {
         fill: white;
         left: -5%;
-        top: 110%;
+        top: 28%;
     }
     .infoBlob1.left-red {
-        left: -10%;
-        top: 125%;
+        opacity: 0.8;
+        left: -8%;
+        top: 32%;
+        @include aniFloatRotate(30deg) ;
     }
     .right-yelllow {
         position: absolute;
         fill: $color-gold-primary;
-        top: 130%;
-        right: -10%;
-        width: 400px;
+        top: 25%;
+        right: -15%;
+        width: 600px;
         @include aniFloat;
     }
     .right-brown {
         position: absolute;
         fill: $color-coffee-primary;
-        top: 165%;
-        right: -2%;
+        opacity: 0.6;
+        top: 32%;
+        right: -3%;
         width: 200px;
         height: fit-content;
-        transform: rotate(30deg) ;
         // @include aniFloat;
+        @include aniFloatRotate(60deg) ;
     }
 
     .infoBlob3 {
         position: absolute;
         width: 350px;
         height: fit-content;
-        right: -8%;
-        top: 30%;
+        right: -10%;
+        top: 8%;
         @include aniFloat;
     }
 

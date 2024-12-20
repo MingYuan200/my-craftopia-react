@@ -15,8 +15,9 @@ export default function Member() {
                     <img className='infoBlob2' src="./images/blob-4.svg" alt="" />
                     <img className='infoBlob3' src="./images/blob-5.svg" alt="" />
 
-                    <Blob4 className='infoBlob2 left-white'/>
+                    
                     <Blob5 className='infoBlob1 left-red'/>
+                    <Blob4 className='infoBlob2 left-white'/>
                     <Blob4 className='right-yelllow'/>
                     <Blob4 className='right-brown'/>
                 </div>

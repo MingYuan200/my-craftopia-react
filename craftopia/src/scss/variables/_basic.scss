@@ -14,21 +14,24 @@
 
 }
 
-// @mixin aniFloatRotate($rotate-angle) {
-//     animation: floatRotate 4s ease-in-out infinite;
-// }
+// 泡泡-上下漂浮+旋轉
+@mixin aniFloatRotate($rotate-angle) {
+    animation: floatRotate-#{$rotate-angle} 10s ease-in-out infinite ;
 
-// @keyframes floatRotate {
-//     0% {
-//         transform: translateY(0px) rotate(0deg);
-//     }
-//     50% {
-//         transform: translateY(-20px) rotate($rotate-angle);
-//     }
-//     100% {
-//         transform: translateY(0px) rotate(0deg);
-//     }
-// }
+    @keyframes floatRotate-#{$rotate-angle} {
+        0% {
+            transform: translateX(0px) rotate(0deg);
+        }
+        50% {
+            transform: translateX(-60px) rotate(#{$rotate-angle});
+        }
+        100% {
+            transform: translateX(0px) rotate(0deg);
+        }
+    }
+}
+
+
 
 
 
