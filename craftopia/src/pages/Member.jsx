@@ -7,7 +7,8 @@ import Blob5 from "../assets/blob5.svg";
 export default function Member() {
     return (
         <>
-            <main>
+            <main id='memberArea'>
+                
 
                 {/* 泡泡區 */}
                 <div className="bg-blob">

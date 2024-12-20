@@ -90,16 +90,16 @@ export default function Qa() {
 
 
             <main>
-                <div className="content-bg">
+                <div id="qa-content">
                     {/* 麵包穴 */}
-                    <div className="bread2">
+                    <div className="bread">
                         <a href="#">首頁</a>
                         <img src="./images/icon-tag/type=arrowRight_bold.svg" alt="" />
                         <a href="/qa">常見問題</a>
                     </div>
 
-                    <div className="content">
-                        <ul className="member-QA-left">
+                    <div className="qa-contentBox">
+                        <ul id="QA-left">
                             <div className="QaLeftSticky">
                                 <li>
                                     <a className="left-list" href="#" 
@@ -135,7 +135,7 @@ export default function Qa() {
 
                         </ul>
 
-                        <div className="member-QA-right">
+                        <div id="QA-right">
                             <section id='qaPart1' ref={refPart1} data-aos='fade-up' data-aos-duration='800'>
                                 <h2 className="title">
                                     <img src="./images/title/會員相關.svg" alt="" />
