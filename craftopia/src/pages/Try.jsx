@@ -2,7 +2,8 @@ import { useState } from "react";
 import Blob from "../assets/blob.svg";
 import ChangePassword from "../component/ChangePassword";
 import MemeberInfo from "../component/MemberInfo";
-import Test from "../component/Test";
+import ReserveCardsBox from "../component/ReserveCardsBox";
+import TestFather from "../component/TestFather";
 
 
 export default function Try() {
@@ -50,9 +51,9 @@ export default function Try() {
 
                         
 
-                        <Test/>
+                        
 
-                        <ChangePassword />
+                        {/* <ChangePassword /> */}
 
                     </div>
                 </div>
@@ -66,41 +67,13 @@ export default function Try() {
                     </h2>
                 </div>
                 {/* 列表區 */}
-                <div className="reserve-cardsBox">
-                    {/* 訂單狀態:進行中 */}
-                    <div className="reserve-row">
-                        <div className="rowIMG">
-                            <img src="./images/classIMG.jpg" alt="" />
-                        </div>
+                
+                <TestFather/>
 
-                        <div className="reserve-content">
-                            <div className="txt">
-                                <p className="tag-state">即將到來</p>
-                                <h3>聖誕禮物首選!皮革證件套組~適合初學者</h3>
-                                <p>12月07日(週六)13:30-15:30。成人1位</p>
-                                <p className="class-item">證件卡夾</p>
-                            </div>
-                            <button className="btn-reserve">修改訂單</button>
-                        </div>
+                <ReserveCardsBox/>
 
-                    </div>
-                    {/* 訂單狀態:完成,多一個標籤finish */}
-                    <div className="reserve-row finish">
-                        <div className="rowIMG">
-                            <img src="./images/classIMG.jpg" alt="" />
-                        </div>
-                        <div className="reserve-content">
-                            <div className="txt">
-                                <p className="tag-state">已完成</p>
-                                <h3>聖誕禮物首選!皮革證件套組~適合初學者</h3>
-                                <p>12月07日(週六)13:30-15:30。成人1位</p>
-                                <p className="class-item">證件卡夾</p>
-                            </div>
-                            <button className="btn-reserve">分享心得</button>
-                        </div>
 
-                    </div>
-                </div>
+                
                 {/* 看全部按鈕 */}
                 <div className="btn-area">
                     <div className="btn-seeAll">

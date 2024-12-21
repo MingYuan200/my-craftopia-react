@@ -193,12 +193,12 @@ export default function Qa() {
                                 <li><a href="">最新課程</a></li>
                             </ul>
                         </li>
-                        <li>
+                        {/* <li>
                             <a href="">商城</a>
                             <ul>
                                 <li><a href="">商城</a></li>
                             </ul>
-                        </li>
+                        </li> */}
                         <li>
                             <a href="">會員中心</a>
                             <ul>

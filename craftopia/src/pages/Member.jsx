@@ -3,6 +3,7 @@ import MemeberInfo from '../component/MemberInfo'
 import '../scss/member.scss'
 import Blob4 from "../assets/blob4.svg";
 import Blob5 from "../assets/blob5.svg";
+import ReserveCardsBox from '../component/ReserveCardsBox';
 
 export default function Member() {
     return (
@@ -73,41 +74,8 @@ export default function Member() {
                         </h2>
                     </div>
                     {/* 列表區 */}
-                    <div className="reserve-cardsBox">
-                        {/* 訂單狀態:進行中 */}
-                        <div className="reserve-row">
-                            <div className="rowIMG">
-                                <img src="./images/classIMG.jpg" alt="" />
-                            </div>
+                    <ReserveCardsBox/>
 
-                            <div className="reserve-content">
-                                <div className="txt">
-                                    <p className="tag-state">即將到來</p>
-                                    <h3>聖誕禮物首選!皮革證件套組~適合初學者</h3>
-                                    <p>12月07日(週六)13:30-15:30。成人1位</p>
-                                    <p className="class-item">證件卡夾</p>
-                                </div>
-                                <button className="btn-reserve">修改訂單</button>
-                            </div>
-
-                        </div>
-                        {/* 訂單狀態:完成,多一個標籤finish */}
-                        <div className="reserve-row finish">
-                            <div className="rowIMG">
-                                <img src="./images/classIMG.jpg" alt="" />
-                            </div>
-                            <div className="reserve-content">
-                                <div className="txt">
-                                    <p className="tag-state">已完成</p>
-                                    <h3>聖誕禮物首選!皮革證件套組~適合初學者</h3>
-                                    <p>12月07日(週六)13:30-15:30。成人1位</p>
-                                    <p className="class-item">證件卡夾</p>
-                                </div>
-                                <button className="btn-reserve">分享心得</button>
-                            </div>
-
-                        </div>
-                    </div>
                     {/* 看全部按鈕 */}
                     <div className="btn-area">
                         <div className="btn-seeAll">
@@ -242,7 +210,7 @@ export default function Member() {
                                 </div>
                             </div>
 
-                            {/* <img src="./images/HrLine_rec.svg" alt="" className="hrline" /> */}
+                            <img src="./images/HrLine_rec.svg" alt="" className="hrline" />
 
                             <div className="Exp flip">
                                 <div className="expPic">
@@ -301,12 +269,12 @@ export default function Member() {
                                 <li><a href="">最新課程</a></li>
                             </ul>
                         </li>
-                        <li>
+                        {/* <li>
                             <a href="">商城</a>
                             <ul>
                                 <li><a href="">商城</a></li>
                             </ul>
-                        </li>
+                        </li> */}
                         <li>
                             <a href="">會員中心</a>
                             <ul>
