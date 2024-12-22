@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
-    overflow: hidden;  
+    overflow: hidden;
     //不能在全區標籤使用overflow-x: hidden; 會害sticky失效
 
     section {
@@ -43,36 +43,90 @@ body {
 .btn-area {
     display: flex;
     align-items: center;
-    position: relative;
-    width: 100%;
     justify-content: flex-end;
-
+    padding: 0 24px;
     margin-top: 80px;
 
-    .btn-seeAll {
+    .seemore-btn {
         display: flex;
         align-items: center;
-        cursor: pointer;
+        position: relative;
+        font-weight: bold;
 
-        p {
-            font-weight: 700;
-            z-index: 1;
-            margin-right: 8px;
+        .font {
+            z-index: 10;
         }
 
-        img {
+        .arr {
             width: 24px;
             height: 24px;
+            margin-left: 12px;
+            z-index: 10;
         }
 
-        .seeAll-deco {
+        .ball {
+            position: absolute;
             width: 36px;
             height: 36px;
-            position: absolute;
-            right: 84px;
-            bottom: -6px;
+            left: -20px;
+        }
+
+
+        &:hover {
+
+            .ball {
+                transition: .8s;
+                filter: hue-rotate(30deg) brightness(140%);
+                transform: translateX(92px);
+            }
+        }
+
+        &.shot {
+            .ball {
+                filter: hue-rotate(30deg) brightness(140%);
+                transition: .7s cubic-bezier(.3, 1.77, .36, .69)
+                    /*cubic-bezier(.5,2.77,.25,.35)*/
+                ;
+                transform: translateX(162px);
+            }
+
+            .transform-delay {
+                transition: .4s;
+                transform: translateX(65px);
+            }
+
+            .transform-delay2 {
+                transition: .3s;
+                opacity: 0;
+            }
+
         }
     }
+
+    // .btn-seeAll {
+    //     display: flex;
+    //     align-items: center;
+    //     cursor: pointer;
+
+    //     p {
+    //         font-weight: 700;
+    //         z-index: 1;
+    //         margin-right: 8px;
+    //     }
+
+    //     img {
+    //         width: 24px;
+    //         height: 24px;
+    //     }
+
+    //     .seeAll-deco {
+    //         width: 36px;
+    //         height: 36px;
+    //         position: absolute;
+    //         right: 84px;
+    //         bottom: -6px;
+    //     }
+    // }
 
 }
 
@@ -94,7 +148,7 @@ body {
             cursor: pointer;
 
             &:hover {
-                @include aniJump;
+                @include aniPen;
             }
         }
 
@@ -388,11 +442,17 @@ body {
         .reserve-row,
         .reserve-row-finish {
             display: flex;
-            background-color: rgb(255, 255, 255, 0.7);
+            background-color: $color-white-60;
             border-radius: 10px;
             overflow: hidden;
             align-items: center;
             height: 240px;
+
+            &:hover {
+                .tag-state {
+                    @include aniBounce;
+                }
+            }
 
 
             .rowIMG {
@@ -446,6 +506,10 @@ body {
                     height: 44px;
                     border-radius: 99px;
                     cursor: pointer;
+
+                    &:hover {
+                        background-color: #B07662;
+                    }
                 }
             }
         }
@@ -591,20 +655,23 @@ body {
         left: -5%;
         top: 28%;
     }
+
     .infoBlob1.left-red {
         opacity: 0.8;
         left: -8%;
         top: 32%;
-        @include aniFloatRotate(30deg) ;
+        @include aniFloatRotate(30deg);
     }
+
     .right-yelllow {
         position: absolute;
         fill: $color-gold-primary;
         top: 25%;
-        right: -15%;
+        right: -10%;
         width: 600px;
         @include aniFloat;
     }
+
     .right-brown {
         position: absolute;
         fill: $color-coffee-primary;
@@ -614,7 +681,7 @@ body {
         width: 200px;
         height: fit-content;
         // @include aniFloat;
-        @include aniFloatRotate(60deg) ;
+        @include aniFloatRotate(60deg);
     }
 
     .infoBlob3 {
@@ -664,7 +731,7 @@ body {
         max-width: 1000px;
         display: flex;
         flex-direction: column;
-        // border: 1px solid tomato;
+
 
         .expTitle {
             display: flex;
@@ -672,9 +739,10 @@ body {
             padding: 0 20%;
             margin-bottom: 60px;
 
-            >img {
+            .expHeader {
                 width: 100%;
                 height: 80px;
+                flex: 1;
             }
 
             .btn-area {

@@ -4,12 +4,13 @@ import '../scss/member.scss'
 import Blob4 from "../assets/blob4.svg";
 import Blob5 from "../assets/blob5.svg";
 import ReserveCardsBox from '../component/ReserveCardsBox';
+import SeeMore from '../component/SeeMore';
 
 export default function Member() {
     return (
         <>
             <main id='memberArea'>
-                
+
 
                 {/* 泡泡區 */}
                 <div className="bg-blob">
@@ -17,11 +18,11 @@ export default function Member() {
                     <img className='infoBlob2' src="./images/blob-4.svg" alt="" />
                     <img className='infoBlob3' src="./images/blob-5.svg" alt="" />
 
-                    
-                    <Blob5 className='infoBlob1 left-red'/>
-                    <Blob4 className='infoBlob2 left-white'/>
-                    <Blob4 className='right-yelllow'/>
-                    <Blob4 className='right-brown'/>
+
+                    <Blob5 className='infoBlob1 left-red' />
+                    <Blob4 className='infoBlob2 left-white' />
+                    <Blob4 className='right-yelllow' />
+                    <Blob4 className='right-brown' />
                 </div>
 
                 {/* 會員資料區 */}
@@ -74,18 +75,13 @@ export default function Member() {
                         </h2>
                     </div>
                     {/* 列表區 */}
-                    <ReserveCardsBox/>
+                    <ReserveCardsBox />
 
                     {/* 看全部按鈕 */}
                     <div className="btn-area">
-                        <div className="btn-seeAll">
-                            <p>
-                                See All
-                            </p>
-                            <img src="./images/icon-tag/type=arrowRight_bold.svg" alt="" />
-                            <img className="seeAll-deco" src="./images/seeAll-dot.svg" alt="" />
 
-                        </div>
+                        <SeeMore text={'See All'} imgBall={"./images/seeAll-dot.svg"} href={"#"} />
+
                     </div>
                 </section>
 
@@ -161,14 +157,9 @@ export default function Member() {
 
                     {/* 看全部按鈕 */}
                     <div className="btn-area">
-                        <div className="btn-seeAll">
-                            <p>
-                                See All
-                            </p>
-                            <img src="./images/icon-tag/type=arrowRight_bold.svg" alt="" />
-                            <img className="seeAll-deco" src="./images/seeAll-dot.svg" alt="" />
 
-                        </div>
+                        <SeeMore text={'See All'} imgBall={"./images/seeAll-dot.svg"} href={"#"} />
+
                     </div>
                 </section>
 
@@ -176,16 +167,11 @@ export default function Member() {
                 <section id="experience">
                     <div className="expWrapper">
                         <div className="expTitle">
-                            <img src="./images/title/我的心得分享.svg" alt="" />
+                            <img className='expHeader' src="./images/title/我的心得分享.svg" alt="" />
                             <div className="btn-area">
-                                <div className="btn-seeAll">
-                                    <p>
-                                        See All
-                                    </p>
-                                    <img src="./images/icon-tag/type=arrowRight_bold.svg" alt="" />
-                                    <img className="seeAll-deco" src="./images/seeAll-dot.svg" alt="" />
+                                
+                            <SeeMore text={'See All'} imgBall={"./images/seeAll-dot.svg"} href={"#"}/>
 
-                                </div>
                             </div>
                         </div>
 
