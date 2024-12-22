@@ -9,7 +9,7 @@ export default function ReserveCard({ imgSrc, stateTag, title, dateTime, attende
                     <p className="tag-state">{stateTag}</p>
                     <h3>{title}</h3>
                     <p>{dateTime}。{attendees}</p>
-                    <p className="class-item">{classType}</p>
+                    <p className="class-item">課程內容：{classType}</p>
                 </div>
                 <button className="btn-reserve">{buttonText}</button>
             </div>

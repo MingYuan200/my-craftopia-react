@@ -137,8 +137,6 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        // gap: 120px;
-        // padding: 0 40px;
 
         /* 編輯按鈕統一設定 */
         .icon-edit {
@@ -152,7 +150,6 @@ body {
             }
         }
 
-
         /* 會員簡歷 */
         .resume {
             display: flex;
@@ -161,51 +158,56 @@ body {
             margin-right: 20%;
 
 
-            .avatar {
-                position: relative;
-                margin: 40px;
-
-                .camera {
-                    width: 50px;
-                    height: 50px;
-                    padding: 8px;
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-
-                    background-color: #E3E3E3;
-                    border-radius: 50%;
-                    cursor: pointer;
-
-                    >img {
-                        width: 100%;
-                        object-fit: contain;
-                    }
-                }
-
-                .ava-photo {
-                    width: 160px;
-                    height: 160px;
-                    border-radius: 50%;
-                    overflow: hidden;
-                    border: 3px solid #E3E3E3;
-
-                    >img {
-                        width: 100%;
-                        object-fit: cover;
-                    }
-                }
-            }
-
-            .name-default {
-                font-size: 1.5rem;
-                font-weight: 700;
+            .avatarBox {
                 display: flex;
+                flex-direction: column;
                 align-items: center;
 
-                margin-bottom: 40px;
+                .avatar {
+                    position: relative;
+                    margin: 40px;
 
+                    .camera {
+                        width: 50px;
+                        height: 50px;
+                        padding: 8px;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+
+                        background-color: #E3E3E3;
+                        border-radius: 50%;
+                        cursor: pointer;
+
+                        >img {
+                            width: 100%;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .ava-photo {
+                        width: 160px;
+                        height: 160px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        border: 3px solid #E3E3E3;
+
+                        >img {
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                .name-default {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 40px;
+                }
             }
+
 
             .member-level {
                 // background-color: antiquewhite;
@@ -248,7 +250,8 @@ body {
             }
         }
 
-        .information {
+        /* 會員資料盒子 */
+        .memberInformation {
             // border: 1px solid #483D3F;
             width: 100%;
 
@@ -422,9 +425,25 @@ body {
     }
 }
 
+/* 資料區-平板 */
+@media ($mediaMd) {
+    #member {
+        .memberWrap {
+            display: flex;
+            flex-direction: column;
+
+            .resume {
+                display: flex;
+                flex-direction: row;
+                margin: 0;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
 /* 預約記錄區 */
 #reserve {
-
     .title {
         width: 70%;
         max-width: 1000px;
@@ -439,14 +458,13 @@ body {
 
 
         // 單一卡片
-        .reserve-row,
-        .reserve-row-finish {
+        .reserve-row {
             display: flex;
             background-color: $color-white-60;
             border-radius: 10px;
             overflow: hidden;
             align-items: center;
-            height: 240px;
+            height: 280px;
 
             &:hover {
                 .tag-state {
@@ -476,6 +494,12 @@ body {
                 justify-content: space-between;
 
                 .txt {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-right: 20px;
+
                     .tag-state {
                         background-image: url(../images/icon-tag/tag-upcoming.svg);
                         background-size: contain;
@@ -488,12 +512,11 @@ body {
 
                     h3 {
                         font-size: 1.25rem;
-                        margin-bottom: 32px;
+                        margin-bottom: 8%;
                     }
 
                     .class-item {
                         color: #B07662;
-                        margin-bottom: 16px;
                     }
                 }
 
@@ -502,10 +525,10 @@ body {
                     color: white;
                     background-color: #483D3F;
                     font-size: 16px;
-                    width: 112px;
-                    height: 44px;
                     border-radius: 99px;
+                    padding: 14px 24px;
                     cursor: pointer;
+                    white-space: wrap;
 
                     &:hover {
                         background-color: #B07662;
@@ -521,12 +544,37 @@ body {
             }
 
             .rowIMG {
-                filter: grayscale(60%);
+                filter: brightness(40%) sepia(50%);
             }
         }
     }
-
 }
+
+/* 預約-平板 */
+// @media ($mediaMd) {
+//     #memberArea>#reserve {
+//         padding: 5% 8%;
+
+//         .reserve-cardsBox {
+//             .reserve-row, .reserve-row.finish {
+//                 height: 320px;
+
+//                 .reserve-content {
+//                     flex-direction: column;
+//                     height: fit-content;
+//                     padding: 20px;
+//                     align-items: center;
+
+//                     .btn-reserve {
+//                         margin-top: 24px;
+//                     }
+//                 }
+//             }
+//         }
+
+//     }
+// }
+
 
 /* 收藏區 */
 #like {
@@ -623,6 +671,17 @@ body {
             .icons-heart {
                 width: 24px;
             }
+        }
+    }
+}
+
+/* 收藏-平板 */
+@media ($mediaMd) {
+    #memberArea>#like {
+        padding: 5% 8%;
+
+        .card-area div:last-child {
+            display: none;
         }
     }
 }
@@ -912,5 +971,20 @@ footer {
     small {
         margin-bottom: 50px;
         font-size: 0.8rem;
+    }
+}
+
+/*頁尾區-平板*/
+@media ($mediaMd) {
+    footer {
+        .foot-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .menu {
+                margin-top: 40px;
+            }
+        }
     }
 }

@@ -30,18 +30,20 @@ export default function Member() {
                     <div className="memberWrap">
                         {/* 會員簡歷 */}
                         <div className="resume">
-                            <div className="avatar">
-                                <div className="ava-photo">
-                                    <img src="./images/avatar/24-02.jpg" alt="" />
+                            <div className="avatarBox">
+                                <div className="avatar">
+                                    <div className="ava-photo">
+                                        <img src="./images/avatar/24-02.jpg" alt="" />
+                                    </div>
+                                    <div className="camera">
+                                        <img src="./images/icon-tag/type=camera.svg" alt="" />
+                                    </div>
                                 </div>
-                                <div className="camera">
-                                    <img src="./images/icon-tag/type=camera.svg" alt="" />
-                                </div>
-                            </div>
 
-                            <div className="name-default">
-                                <p>阿明</p>
-                                <img className="icon-edit" src="./images/icon-tag/type=edit.svg" alt="" />
+                                <div className="name-default">
+                                    <p>阿明</p>
+                                    <img className="icon-edit" src="./images/icon-tag/type=edit.svg" alt="" />
+                                </div>
                             </div>
 
                             <div className="member-level">
@@ -55,7 +57,7 @@ export default function Member() {
                         </div>
 
                         {/* 會員資料盒子 */}
-                        <div className="information">
+                        <div className="memberInformation">
 
                             {/* 會員基本資料 */}
                             <MemeberInfo />
@@ -80,7 +82,7 @@ export default function Member() {
                     {/* 看全部按鈕 */}
                     <div className="btn-area">
 
-                        <SeeMore text={'See All'} imgBall={"./images/seeAll-dot.svg"} href={"#"} />
+                        <SeeMore text={'See All'} imgBall={"./images/seeAll-dot.svg"} href={"/member"} />
 
                     </div>
                 </section>
@@ -158,7 +160,7 @@ export default function Member() {
                     {/* 看全部按鈕 */}
                     <div className="btn-area">
 
-                        <SeeMore text={'See All'} imgBall={"./images/seeAll-dot.svg"} href={"#"} />
+                        <SeeMore text={'See All'} imgBall={"./images/seeAll-dot.svg"} href={"/member"} />
 
                     </div>
                 </section>
@@ -169,8 +171,8 @@ export default function Member() {
                         <div className="expTitle">
                             <img className='expHeader' src="./images/title/我的心得分享.svg" alt="" />
                             <div className="btn-area">
-                                
-                            <SeeMore text={'See All'} imgBall={"./images/seeAll-dot.svg"} href={"#"}/>
+
+                                <SeeMore text={'See All'} imgBall={"./images/seeAll-dot.svg"} href={"/member"} />
 
                             </div>
                         </div>
