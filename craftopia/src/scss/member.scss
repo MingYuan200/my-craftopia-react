@@ -460,11 +460,14 @@ body {
         // 單一卡片
         .reserve-row {
             display: flex;
+            flex-direction: row-reverse;
             background-color: $color-white-60;
-            border-radius: 10px;
+            border-radius: 40px;
             overflow: hidden;
+
             align-items: center;
-            height: 280px;
+            height: 240px;
+            position: relative;
 
             &:hover {
                 .tag-state {
@@ -476,6 +479,7 @@ body {
             .rowIMG {
                 width: 30%;
                 height: 100%;
+
 
                 img {
                     object-fit: cover;
@@ -489,8 +493,7 @@ body {
                 height: 100%;
                 padding: 20px 20px 20px 60px;
                 display: flex;
-                flex-direction: row;
-                align-items: end;
+                flex-direction: column;
                 justify-content: space-between;
 
                 .txt {
@@ -498,7 +501,6 @@ body {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    margin-right: 20px;
 
                     .tag-state {
                         background-image: url(../images/icon-tag/tag-upcoming.svg);
@@ -512,26 +514,34 @@ body {
 
                     h3 {
                         font-size: 1.25rem;
-                        margin-bottom: 8%;
+                        margin-bottom: 20px;
                     }
 
                     .class-item {
-                        color: #B07662;
+                        color: $color-neutral-60;
                     }
                 }
+            }
+
+            .buttonWrap {
+                position: absolute;
+                right: 20px;
+                bottom: 20px;
+                white-space: pre-line;
 
                 .btn-reserve {
                     border: 0;
-                    color: white;
-                    background-color: #483D3F;
+                    color: $color-coffee-primary;
+                    background-color: $color-white-80;
                     font-size: 16px;
+                    font-weight: $font-weight-bold;
                     border-radius: 99px;
                     padding: 14px 24px;
                     cursor: pointer;
-                    white-space: wrap;
 
                     &:hover {
-                        background-color: #B07662;
+                        background-color: $color-brown-dark;
+                        color: #fff;
                     }
                 }
             }
@@ -551,29 +561,28 @@ body {
 }
 
 /* 預約-平板 */
-// @media ($mediaMd) {
-//     #memberArea>#reserve {
-//         padding: 5% 8%;
+@media ($mediaMd) {
+    #memberArea>#reserve {
+        padding: 5% 8%;
 
-//         .reserve-cardsBox {
-//             .reserve-row, .reserve-row.finish {
-//                 height: 320px;
+        .reserve-cardsBox {
 
-//                 .reserve-content {
-//                     flex-direction: column;
-//                     height: fit-content;
-//                     padding: 20px;
-//                     align-items: center;
+            .reserve-row,
+            .reserve-row.finish {
+                border-radius: 40px;
 
-//                     .btn-reserve {
-//                         margin-top: 24px;
-//                     }
-//                 }
-//             }
-//         }
+                .reserve-content {
+                    padding: 40px;
+                }
 
-//     }
-// }
+                .buttonWrap {
+                    white-space: pre-line;
+                }
+            }
+        }
+
+    }
+}
 
 
 /* 收藏區 */
@@ -686,91 +695,6 @@ body {
     }
 }
 
-/* 泡泡區 */
-.bg-blob {
-    z-index: -2;
-
-    .infoBlob1 {
-        position: absolute;
-        width: 500px;
-        height: fit-content;
-        left: -4%;
-        top: 5%;
-        @include aniFloat;
-    }
-
-    .infoBlob2 {
-        position: absolute;
-        width: 250px;
-        height: fit-content;
-        right: -5%;
-        top: 3%;
-        @include aniFloat;
-        // @include aniFloatRotate(-20deg);
-    }
-
-    .infoBlob2.left-white {
-        fill: white;
-        left: -5%;
-        top: 28%;
-    }
-
-    .infoBlob1.left-red {
-        opacity: 0.8;
-        left: -8%;
-        top: 32%;
-        @include aniFloatRotate(30deg);
-    }
-
-    .right-yelllow {
-        position: absolute;
-        fill: $color-gold-primary;
-        top: 25%;
-        right: -10%;
-        width: 600px;
-        @include aniFloat;
-    }
-
-    .right-brown {
-        position: absolute;
-        fill: $color-coffee-primary;
-        opacity: 0.6;
-        top: 32%;
-        right: -3%;
-        width: 200px;
-        height: fit-content;
-        // @include aniFloat;
-        @include aniFloatRotate(60deg);
-    }
-
-    .infoBlob3 {
-        position: absolute;
-        width: 350px;
-        height: fit-content;
-        right: -10%;
-        top: 8%;
-        @include aniFloat;
-    }
-
-    .expBlob2 {
-        position: absolute;
-        width: 200px;
-        height: fit-content;
-        right: 5%;
-        top: 12%;
-        @include aniFloat;
-    }
-
-    .expBlob3 {
-        position: absolute;
-        width: 350px;
-        height: fit-content;
-        left: -2%;
-        bottom: 2%;
-        rotate: 330deg;
-        @include aniFloat;
-    }
-}
 
 /* 心得區 */
 #experience {
@@ -907,6 +831,100 @@ body {
     }
 }
 
+/* 心得-平板 */
+// @media ($mediaMd) {
+//     #like {
+
+//     }
+// }
+
+
+
+/* 泡泡區 */
+.bg-blob {
+    z-index: -2;
+
+    .infoBlob1 {
+        position: absolute;
+        width: 500px;
+        height: fit-content;
+        left: -4%;
+        top: 5%;
+        @include aniFloat;
+    }
+
+    .infoBlob2 {
+        position: absolute;
+        width: 250px;
+        height: fit-content;
+        right: -5%;
+        top: 3%;
+        @include aniFloat;
+        // @include aniFloatRotate(-20deg);
+    }
+
+    .infoBlob2.left-white {
+        fill: white;
+        left: -5%;
+        top: 28%;
+    }
+
+    .infoBlob1.left-red {
+        opacity: 0.8;
+        left: -8%;
+        top: 32%;
+        @include aniFloatRotate(30deg);
+    }
+
+    .right-yelllow {
+        position: absolute;
+        fill: $color-gold-primary;
+        top: 25%;
+        right: -10%;
+        width: 600px;
+        @include aniFloat;
+    }
+
+    .right-brown {
+        position: absolute;
+        fill: $color-coffee-primary;
+        opacity: 0.6;
+        top: 32%;
+        right: -3%;
+        width: 200px;
+        height: fit-content;
+        // @include aniFloat;
+        @include aniFloatRotate(60deg);
+    }
+
+    .infoBlob3 {
+        position: absolute;
+        width: 350px;
+        height: fit-content;
+        right: -10%;
+        top: 8%;
+        @include aniFloat;
+    }
+
+    .expBlob2 {
+        position: absolute;
+        width: 200px;
+        height: fit-content;
+        right: 5%;
+        top: 12%;
+        @include aniFloat;
+    }
+
+    .expBlob3 {
+        position: absolute;
+        width: 350px;
+        height: fit-content;
+        left: -2%;
+        bottom: 2%;
+        rotate: 330deg;
+        @include aniFloat;
+    }
+}
 
 /* 頁尾區 */
 footer {

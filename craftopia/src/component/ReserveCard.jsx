@@ -11,6 +11,8 @@ export default function ReserveCard({ imgSrc, stateTag, title, dateTime, attende
                     <p>{dateTime}。{attendees}</p>
                     <p className="class-item">課程內容：{classType}</p>
                 </div>
+            </div>
+            <div className="buttonWrap">
                 <button className="btn-reserve">{buttonText}</button>
             </div>
         </div>
