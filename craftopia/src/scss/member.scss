@@ -39,6 +39,7 @@ body {
     gap: 14px;
 }
 
+
 // 看全部按鈕
 .btn-area {
     display: flex;
@@ -102,32 +103,6 @@ body {
 
         }
     }
-
-    // .btn-seeAll {
-    //     display: flex;
-    //     align-items: center;
-    //     cursor: pointer;
-
-    //     p {
-    //         font-weight: 700;
-    //         z-index: 1;
-    //         margin-right: 8px;
-    //     }
-
-    //     img {
-    //         width: 24px;
-    //         height: 24px;
-    //     }
-
-    //     .seeAll-deco {
-    //         width: 36px;
-    //         height: 36px;
-    //         position: absolute;
-    //         right: 84px;
-    //         bottom: -6px;
-    //     }
-    // }
-
 }
 
 /* 會員資料區 */
@@ -260,7 +235,7 @@ body {
                 border: 0;
                 color: white;
                 background-color: #483D3F;
-                font-size: 16px;
+                font-size: 1rem;
                 padding: 14px 24px;
                 border-radius: 99px;
                 cursor: pointer;
@@ -281,7 +256,7 @@ body {
                     color: #483D3F;
                     background-color: transparent;
                     border: 2px solid #483D3F;
-                    font-size: 16px;
+                    font-size: 1rem;
                     padding: 14px 24px;
                     border-radius: 99px;
                     cursor: pointer;
@@ -438,9 +413,47 @@ body {
                 margin: 0;
                 margin-bottom: 40px;
             }
+
+            .memberInformation {
+                #password {
+                    .title {
+                        h2 {
+                            img {
+                                height: 24px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
+
+/* 資料區-手機 */
+@media ($mediaSm) {
+    #memberArea>#member {
+        padding: 5% 8%;
+
+        .memberWrap {
+            .resume {
+                flex-direction: column;
+                margin: auto;
+                margin-bottom: 40px;
+            }
+
+            .memberInformation {
+                .info {
+                    .dataBox {
+                        padding: 20px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
 
 /* 預約記錄區 */
 #reserve {
@@ -462,7 +475,7 @@ body {
             display: flex;
             flex-direction: row-reverse;
             background-color: $color-white-60;
-            border-radius: 40px;
+            border-radius: 10px;
             overflow: hidden;
 
             align-items: center;
@@ -533,7 +546,7 @@ body {
                     border: 0;
                     color: $color-coffee-primary;
                     background-color: $color-white-80;
-                    font-size: 16px;
+                    font-size: 1rem;
                     font-weight: $font-weight-bold;
                     border-radius: 99px;
                     padding: 14px 24px;
@@ -569,7 +582,7 @@ body {
 
             .reserve-row,
             .reserve-row.finish {
-                border-radius: 40px;
+                // border-radius: 40px;
 
                 .reserve-content {
                     padding: 40px;
@@ -584,17 +597,31 @@ body {
     }
 }
 
+/* 手機 */
+// @media ($mediaMd) {
+//     #reserve {
+//         .reserve-row{
+//             flex-direction: column;
+//         }
+//     }
+// }
+
 
 /* 收藏區 */
-#like {
+#memberArea>#like {
+    padding: 0%;
+    width: fit-content;
+
 
     .card-area {
         display: flex;
         justify-content: space-between;
+        margin: auto;
 
         .classCard {
             position: relative;
             width: 320px;
+            margin: 0 20px;
 
             div {
 
@@ -625,6 +652,12 @@ body {
                 }
             }
 
+            .classWrapper {
+                display: flex;
+                flex-direction: column;
+                padding: 12px;
+            }
+
             .classTag {
 
                 margin: 20px 0;
@@ -632,7 +665,7 @@ body {
 
                 p {
                     color: #ffffff;
-                    font-size: 13px;
+                    font-size: 0.75rem;
                     margin-right: 12px;
 
                 }
@@ -655,7 +688,7 @@ body {
                 margin-bottom: 24px;
 
                 h3 {
-                    font-size: 18px;
+                    font-size: 1.2rem;
                     font-weight: 600;
 
                 }
@@ -672,7 +705,7 @@ body {
 
                 .classPrice {
                     color: #483D3F;
-                    font-size: 22px;
+                    font-size: 1.35rem;
                 }
             }
 
@@ -689,8 +722,18 @@ body {
     #memberArea>#like {
         padding: 5% 8%;
 
-        .card-area div:last-child {
+        .card-area .classCard:last-child {
             display: none;
+        }
+    }
+}
+
+/* 收藏-手機 */
+@media ($mediaSm) {
+    #like {
+        .card-area {
+            flex-direction: column;
+            gap: 24px;
         }
     }
 }
@@ -739,6 +782,7 @@ body {
                 height: 300px;
                 display: flex;
                 margin: 40px 12px;
+                align-items: center;
 
 
                 &:hover {
@@ -760,7 +804,7 @@ body {
                 .expPic {
                     width: 400px;
                     height: 100%;
-                    border-radius: 5% 40%;
+                    border-radius: 5% 5%;
                     overflow: hidden;
                     transition: all .2s ease-in-out;
 
@@ -773,8 +817,9 @@ body {
 
 
                 .expContent {
-                    padding: 30px 20px 30px 65px;
+                    padding: 30px 30px 30px 65px;
                     flex: 1;
+                    min-width: 400px;
 
 
 
@@ -783,7 +828,7 @@ body {
 
                         p {
                             margin: 0 20px;
-                            font-size: 20px;
+                            font-size: 1.25rem;
                         }
 
                         img {
@@ -794,50 +839,69 @@ body {
 
                     .expDate {
                         display: flex;
+                        flex-direction: column;
                         margin: 10px 0;
 
                         p {
                             //日期
                             color: #5A5A5A;
-                            font-size: 14px;
+                            font-size: 0.85rem;
                         }
 
                         span {
                             margin: 0 10px;
                         }
-                    }
 
-                    .expTxt {
-                        // border: 1px solid tomato;
-                        font-weight: 400;
-                        line-height: 170%;
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 5;
-                        overflow: hidden;
-                        padding-right: 40px;
-                        margin-top: 24px;
-
+                        .expItem {
+                            // 單行省略
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
                     }
+                }
+
+                .expTxt {
+                    // border: 1px solid tomato;
+                    font-weight: 400;
+                    line-height: 170%;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 4;
+                    overflow: hidden;
+                    margin-top: 24px;
 
                 }
-            }
 
-            .Exp.flip {
-                flex-direction: row-reverse;
             }
         }
-
     }
 }
 
 /* 心得-平板 */
-// @media ($mediaMd) {
-//     #like {
+@media ($mediaMd) {
+    #memberArea>#experience {
+        padding: 5% 8%;
 
-//     }
-// }
+        .expWrapper .newestExp .Exp {
+            height: 240px;
 
+            .expPic {
+                width: 240px;
+            }
+
+            .expContent {
+                min-width: 300px;
+
+                .expTxt {
+                    -webkit-line-clamp: 3;
+                }
+            }
+        }
+    }
+}
+
+/* 心得-手機 */
 
 
 /* 泡泡區 */
@@ -966,7 +1030,7 @@ footer {
         >li {
             width: 6rem;
             margin: 0 10px;
-            font-size: 14px;
+            font-size: 0.85px;
             font-weight: 400;
 
             ul {
@@ -1004,5 +1068,12 @@ footer {
                 margin-top: 40px;
             }
         }
+    }
+}
+
+/* 頁尾區-手機 */
+@media ($mediaSm) {
+    footer {
+        display: none;
     }
 }

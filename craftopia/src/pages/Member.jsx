@@ -5,6 +5,7 @@ import Blob4 from "../assets/blob4.svg";
 import Blob5 from "../assets/blob5.svg";
 import ReserveCardsBox from '../component/ReserveCardsBox';
 import SeeMore from '../component/SeeMore';
+import MyShareBox from '../component/MyShareBox';
 
 export default function Member() {
     return (
@@ -100,37 +101,19 @@ export default function Member() {
                                     <img className="classPhoto-img" src="./images/classphoto-01.jpg" alt="" />
                                     <img className="tagHotorNew" src="./images/icon-tag/labels-hot.svg" alt="" />
                                 </figure>
-                                <div className="classTag">
-                                    <p className="classLevel">入門</p>
-                                    <p className="classTime">3hr</p>
-                                </div>
-                                <div className="classTitle">
-                                    <h3>創造專屬你們的對戒！『草樹工作坊』銀戒雙人體驗課 </h3>
-                                    <img className="icons-heart" src="./images/icon-tag/icons-heart.svg" alt="" />
-                                </div>
-                                <div className="classPrice">
-                                    <p className="classStoreName">草樹工作坊</p>
-                                    <p className="classPrice">$ 3800</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="classCard">
-                            <a href="#">
-                                <figure className="classPhoto">
-                                    <img className="classPhoto-img" src="./images/classphoto-01.jpg" alt="" />
-                                    <img className="tagHotorNew" src="./images/icon-tag/labels-hot.svg" alt="" />
-                                </figure>
-                                <div className="classTag">
-                                    <p className="classLevel">入門</p>
-                                    <p className="classTime">3hr</p>
-                                </div>
-                                <div className="classTitle">
-                                    <h3>創造專屬你們的對戒！『草樹工作坊』銀戒雙人體驗課 </h3>
-                                    <img className="icons-heart" src="./images/icon-tag/icons-heart.svg" alt="" />
-                                </div>
-                                <div className="classPrice">
-                                    <p className="classStoreName">草樹工作坊</p>
-                                    <p className="classPrice">$ 3800</p>
+                                <div className="classWrapper">
+                                    <div className="classTag">
+                                        <p className="classLevel">入門</p>
+                                        <p className="classTime">3hr</p>
+                                    </div>
+                                    <div className="classTitle">
+                                        <h3>創造專屬你們的對戒！『草樹工作坊』銀戒雙人體驗課 </h3>
+                                        <img className="icons-heart" src="./images/icon-tag/icons-heart.svg" alt="" />
+                                    </div>
+                                    <div className="classPrice">
+                                        <p className="classStoreName">草樹工作坊</p>
+                                        <p className="classPrice">$ 3800</p>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -140,20 +123,45 @@ export default function Member() {
                                     <img className="classPhoto-img" src="./images/classphoto-01.jpg" alt="" />
                                     <img className="tagHotorNew" src="./images/icon-tag/labels-hot.svg" alt="" />
                                 </figure>
-                                <div className="classTag">
-                                    <p className="classLevel">入門</p>
-                                    <p className="classTime">3hr</p>
-                                </div>
-                                <div className="classTitle">
-                                    <h3>創造專屬你們的對戒！『草樹工作坊』銀戒雙人體驗課 </h3>
-                                    <img className="icons-heart" src="./images/icon-tag/icons-heart.svg" alt="" />
-                                </div>
-                                <div className="classPrice">
-                                    <p className="classStoreName">草樹工作坊</p>
-                                    <p className="classPrice">$ 3800</p>
+                                <div className="classWrapper">
+                                    <div className="classTag">
+                                        <p className="classLevel">入門</p>
+                                        <p className="classTime">3hr</p>
+                                    </div>
+                                    <div className="classTitle">
+                                        <h3>創造專屬你們的對戒！『草樹工作坊』銀戒雙人體驗課 </h3>
+                                        <img className="icons-heart" src="./images/icon-tag/icons-heart.svg" alt="" />
+                                    </div>
+                                    <div className="classPrice">
+                                        <p className="classStoreName">草樹工作坊</p>
+                                        <p className="classPrice">$ 3800</p>
+                                    </div>
                                 </div>
                             </a>
                         </div>
+                        <div className="classCard">
+                            <a href="#">
+                                <figure className="classPhoto">
+                                    <img className="classPhoto-img" src="./images/classphoto-01.jpg" alt="" />
+                                    <img className="tagHotorNew" src="./images/icon-tag/labels-hot.svg" alt="" />
+                                </figure>
+                                <div className="classWrapper">
+                                    <div className="classTag">
+                                        <p className="classLevel">入門</p>
+                                        <p className="classTime">3hr</p>
+                                    </div>
+                                    <div className="classTitle">
+                                        <h3>創造專屬你們的對戒！『草樹工作坊』銀戒雙人體驗課 </h3>
+                                        <img className="icons-heart" src="./images/icon-tag/icons-heart.svg" alt="" />
+                                    </div>
+                                    <div className="classPrice">
+                                        <p className="classStoreName">草樹工作坊</p>
+                                        <p className="classPrice">$ 3800</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        
                     </div>
 
 
@@ -177,50 +185,8 @@ export default function Member() {
                             </div>
                         </div>
 
+                        <MyShareBox/>
 
-                        <div className="newestExp">
-                            <div className="Exp">
-                                <div className="expPic">
-                                    <img src="./images/exp-01.jpg" alt="" />
-                                </div>
-                                <div className="expContent">
-                                    <div className="expInfo">
-                                        <img src="./images/exp-id-pic-1.png" alt="" />
-                                        <p>Amber</p>
-                                        <img src="./images/tag-stoneLV.svg" alt="" />
-                                    </div>
-                                    <div className="expDate">
-                                        <p>2020年12月20日</p>
-                                        <span>‧</span>
-                                        <p>陶冶身心造型飾品碟</p>
-                                    </div>
-                                    <p className="expTxt">點婆登乙新笑打路有高且昌世了寸蝸學浪：要荷火讀母東，斥只肉拉采夕請真新共聽幸頭條哭間尾，我過讀戶尼東物朵走抓美物由，園松冒同母會彩室。昌唱主每發，良又貫春吹工毛課北起目具京游乙草比珠，話而停吃香物洋！昌唱主每發，良又貫春吹工毛課北起目具京游乙草比珠，話而停吃香物洋！文立黑愛身做斗菜兄貓訴正千相常兆媽；口放山放而勿見立八叫色斤跳公從。從八歌吃害都現風百。片就左，冒休夏豆西中，勿且讀男女笑。文立黑愛身做斗菜兄貓訴正千相常兆媽；口放山放而勿見立八叫色斤跳公從。從八歌吃害都現風百。片就左，冒休夏豆西中，勿且讀男女笑。</p>
-                                </div>
-                            </div>
-
-                            <img src="./images/HrLine_rec.svg" alt="" className="hrline" />
-
-                            <div className="Exp flip">
-                                <div className="expPic">
-                                    <img src="./images/exp-02.jpg" alt="" />
-                                </div>
-                                <div className="expContent">
-                                    <div className="expInfo">
-                                        <img src="./images/exp-id-pic-1.png" alt="" />
-                                        <p>Amber</p>
-                                        <img src="./images/tag-stoneLV.svg" alt="" />
-                                    </div>
-                                    <div className="expDate">
-                                        <p>2021年8月15日</p>
-                                        <span>‧</span>
-                                        <p>Overloading 戒指 | 純銀 | 送禮自用</p>
-                                    </div>
-                                    <p className="expTxt">
-                                        點婆登乙新笑打路有高且昌世了寸蝸學浪：要荷火讀母東，斥只肉拉采夕請真新共聽幸頭條哭間尾，我過讀戶尼東物朵走抓美物由，園松冒同母會彩室。昌唱主每發，良又貫春吹工毛課北起目具京游乙草比珠，話而停吃香物洋！昌唱主每發，良又貫春吹工毛課北起目具京游乙草比珠，話而停吃香物洋！文立黑愛身做斗菜兄貓訴正千相常兆媽；口放山放而勿見立八叫色斤跳公從。從八歌吃害都現風百。片就左，冒休夏豆西中，勿且讀男女笑。文立黑愛身做斗菜兄貓訴正千相常兆媽；口放山放而勿見立八叫色斤跳公從。從八歌吃害都現風百。片就左，冒休夏豆西中，勿且讀男女笑。
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     {/* blob裝飾 */}

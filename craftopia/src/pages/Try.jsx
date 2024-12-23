@@ -7,6 +7,7 @@ import TestFather from "../component/TestFather";
 import SeeMore from "../component/SeeMore";
 
 
+
 export default function Try() {
 
     
@@ -17,6 +18,8 @@ export default function Try() {
             999
             <Blob ></Blob>
             <br />
+
+
 
             <SeeMore text={'See All'} imgBall={"./images/seeAll-dot.svg"} href={"#"}/>
 
