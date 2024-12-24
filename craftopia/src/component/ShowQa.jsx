@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-export default function ShowQa({data}) {
+export default function ShowQa({ data }) {
 
-    
+
 
     const [qaData, setQaData] = useState(data);
 
@@ -16,7 +16,15 @@ export default function ShowQa({data}) {
         }));
     };
 
-    // console.log(qaData);
+    // 建立切換 雙向展開收合 的函式，但會有一點暈
+    // const toggleClick = (id) => {
+    //     setQaData(qaData.map((data) => {
+    //         return {
+    //             ...data,
+    //             isClicked: data.id === id ? !data.isClicked : false,
+    //         };
+    //     }))
+    // }
 
     return (
         <>
@@ -60,19 +68,5 @@ export default function ShowQa({data}) {
 }
 
 
-// 建立切換 雙向展開收合 的函式，但會有一點暈
-// const toggleClick = (id) => {
-//     setQaData(qaData.map((data) => {
-//         return {
-//             ...data,
-//             isClicked: data.id === id ? !data.isClicked : false,
-//         };
-//     }))
-// }
 
 
-// const qaData = {
-//     問題頁面之會員:[],
-//     問題頁面之課程:[],
-//     問題頁面之預約:[],
-// };
